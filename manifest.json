@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "higgsfield",
-  "name": "Arrumo Higgsfield Plugin",
-  "description": "The default Higgsfield adapter for generated video assets.",
+  "name": "Higgsfield",
+  "description": "Short AI video clips the agent can cut into your edits.",
   "capabilities": {
     "video-generation": {
       "name": "Video generation",
@@ -12,8 +12,8 @@
   "settings": [
     {
       "id": "api-key",
-      "label": "API key",
-      "description": "Credential used for API calls to Higgsfield.",
+      "label": "Higgsfield API key",
+      "description": "Used for generated clips. Stored in the system vault; agents can use it through Arrumo but never read it.",
       "kind": "secret",
       "scope": "workspace",
       "required": true
