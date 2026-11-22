@@ -6,11 +6,11 @@
   "capabilities": {
     "video-generation": {
       "name": "Video generation",
-      "description": "Generate video assets from prompts."
+      "description": "Generate clips with 41 models: text, frames, references, motion transfer, extending and editing clips."
     },
     "image-generation": {
       "name": "Image generation",
-      "description": "Generate images from prompts, following up to three reference images."
+      "description": "Generate images with 14 models, from photo-real people to typography and ads, following reference images where the model takes them."
     }
   },
   "settings": [
@@ -26,16 +26,79 @@
     {
       "id": "video-model",
       "label": "Video model",
-      "description": "Kling 3.0 Standard is the default. Kling 3.0 Pro looks better and costs more. Seedance 2.0 follows reference images and videos you or the agent attach; the Kling models animate a single image.",
+      "description": "The model used when you or the agent don't pick one. Generate shows what each is best for.",
       "kind": "string",
       "scope": "workspace",
       "required": false,
       "choices": [
-        "kling-3.0-std",
+        "cinema-studio-4.0",
+        "genjutsu-motion-transfer",
+        "genjutsu-object-swap",
+        "grok-imagine-video-1.5",
+        "happy-horse-1.0",
+        "happy-horse-1.0-reference",
+        "happy-horse-1.1",
+        "happy-horse-1.1-reference",
+        "kling-2.5-turbo-pro",
+        "kling-2.5-turbo-std",
+        "kling-2.6-motion-pro",
+        "kling-2.6-motion-std",
+        "kling-2.6-pro",
+        "kling-3.0-4k",
+        "kling-3.0-motion-pro",
+        "kling-3.0-motion-std",
         "kling-3.0-pro",
-        "seedance-2.0"
+        "kling-3.0-std",
+        "kling-3.0-turbo",
+        "kling-o3",
+        "kling-o3-edit",
+        "kling-o3-reference",
+        "kling-omni",
+        "kling-omni-edit",
+        "kling-omni-reference",
+        "ltx-2.5-fast",
+        "ltx-2.5-pro",
+        "minimax-h3",
+        "minimax-h3-reference",
+        "seedance-2.0",
+        "seedance-2.0-reference",
+        "seedance-2.5",
+        "seedance-2.5-edit",
+        "seedance-2.5-extend",
+        "seedance-2.5-reference",
+        "wan-2.6",
+        "wan-2.7-reference",
+        "wan-3.0",
+        "wan-3.0-prime",
+        "wan-3.0-prime-reference",
+        "wan-3.0-reference"
       ],
       "default": "kling-3.0-std"
+    },
+    {
+      "id": "image-model",
+      "label": "Image model",
+      "description": "The model used when you or the agent don't pick one. Generate shows what each is best for.",
+      "kind": "string",
+      "scope": "workspace",
+      "required": false,
+      "choices": [
+        "grok-image-2",
+        "ideogram-4",
+        "marketing-studio",
+        "marketing-studio-flare",
+        "marketing-studio-sunburst",
+        "qwen-image-3",
+        "recraft-4.1",
+        "recraft-4.1-pro",
+        "recraft-4.1-utility",
+        "recraft-4.1-utility-pro",
+        "soul",
+        "soul-2",
+        "soul-cinema",
+        "z-image-turbo"
+      ],
+      "default": "qwen-image-3"
     }
   ],
   "introduction": {
@@ -58,11 +121,11 @@
       "capabilities": {
         "video-generation": {
           "name": "Generación de vídeo",
-          "description": "Genera clips de vídeo a partir de descripciones."
+          "description": "Genera clips con 41 modelos: texto, fotogramas, referencias, transferencia de movimiento, ampliar y editar clips."
         },
         "image-generation": {
           "name": "Generación de imágenes",
-          "description": "Genera imágenes a partir de descripciones, siguiendo hasta tres imágenes de referencia."
+          "description": "Genera imágenes con 14 modelos, desde personas fotorrealistas hasta tipografía y anuncios, siguiendo imágenes de referencia cuando el modelo las admite."
         }
       },
       "settings": {
@@ -72,7 +135,70 @@
         },
         "video-model": {
           "label": "Modelo de vídeo",
-          "description": "Kling 3.0 Standard es el predeterminado. Kling 3.0 Pro se ve mejor y cuesta más. Seedance 2.0 sigue las imágenes y vídeos de referencia que adjuntes tú o el agente; los modelos Kling animan una sola imagen."
+          "description": "El modelo que se usa cuando ni tú ni el agente eligen uno. Generar muestra para qué sirve mejor cada uno.",
+          "choices": {
+            "cinema-studio-4.0": "Cinema Studio 4.0",
+            "genjutsu-motion-transfer": "Genjutsu Motion Transfer",
+            "genjutsu-object-swap": "Genjutsu Object Swap",
+            "grok-imagine-video-1.5": "Grok Imagine Video 1.5",
+            "happy-horse-1.0": "Happy Horse 1.0",
+            "happy-horse-1.0-reference": "Happy Horse 1.0 References",
+            "happy-horse-1.1": "Happy Horse 1.1",
+            "happy-horse-1.1-reference": "Happy Horse 1.1 References",
+            "kling-2.5-turbo-pro": "Kling 2.5 Turbo Pro",
+            "kling-2.5-turbo-std": "Kling 2.5 Turbo Standard",
+            "kling-2.6-motion-pro": "Kling 2.6 Motion Control Pro",
+            "kling-2.6-motion-std": "Kling 2.6 Motion Control Standard",
+            "kling-2.6-pro": "Kling 2.6 Pro",
+            "kling-3.0-4k": "Kling 3.0 4K",
+            "kling-3.0-motion-pro": "Kling 3.0 Motion Control Pro",
+            "kling-3.0-motion-std": "Kling 3.0 Motion Control Standard",
+            "kling-3.0-pro": "Kling 3.0 Pro",
+            "kling-3.0-std": "Kling 3.0 Standard",
+            "kling-3.0-turbo": "Kling 3.0 Turbo",
+            "kling-o3": "Kling O3",
+            "kling-o3-edit": "Kling O3 Edit",
+            "kling-o3-reference": "Kling O3 References",
+            "kling-omni": "Kling Omni",
+            "kling-omni-edit": "Kling Omni Edit",
+            "kling-omni-reference": "Kling Omni References",
+            "ltx-2.5-fast": "LTX-2.5 Fast",
+            "ltx-2.5-pro": "LTX-2.5 Pro",
+            "minimax-h3": "MiniMax H3",
+            "minimax-h3-reference": "MiniMax H3 References",
+            "seedance-2.0": "Seedance 2.0",
+            "seedance-2.0-reference": "Seedance 2.0 References",
+            "seedance-2.5": "Seedance 2.5",
+            "seedance-2.5-edit": "Seedance 2.5 Edit",
+            "seedance-2.5-extend": "Seedance 2.5 Extend",
+            "seedance-2.5-reference": "Seedance 2.5 References",
+            "wan-2.6": "Wan 2.6",
+            "wan-2.7-reference": "Wan 2.7 References",
+            "wan-3.0": "Wan 3.0",
+            "wan-3.0-prime": "Wan 3.0 Prime",
+            "wan-3.0-prime-reference": "Wan 3.0 Prime References",
+            "wan-3.0-reference": "Wan 3.0 References"
+          }
+        },
+        "image-model": {
+          "label": "Modelo de imagen",
+          "description": "El modelo que se usa cuando ni tú ni el agente eligen uno. Generar muestra para qué sirve mejor cada uno.",
+          "choices": {
+            "grok-image-2": "Grok Image 2.0",
+            "ideogram-4": "Ideogram 4.0",
+            "marketing-studio": "Marketing Studio 2.0",
+            "marketing-studio-flare": "Marketing Studio 2.5 Flare",
+            "marketing-studio-sunburst": "Marketing Studio 2.5 Sunburst",
+            "qwen-image-3": "Qwen Image 3",
+            "recraft-4.1": "Recraft V4.1",
+            "recraft-4.1-pro": "Recraft V4.1 Pro",
+            "recraft-4.1-utility": "Recraft V4.1 Utility",
+            "recraft-4.1-utility-pro": "Recraft V4.1 Utility Pro",
+            "soul": "SOUL",
+            "soul-2": "SOUL 2",
+            "soul-cinema": "SOUL Cinema",
+            "z-image-turbo": "Z-Image Turbo"
+          }
         }
       },
       "iconNotice": "Higgsfield y su logotipo son marcas de Higgsfield AI."
@@ -82,11 +208,11 @@
       "capabilities": {
         "video-generation": {
           "name": "Geração de vídeo",
-          "description": "Gera clipes de vídeo a partir de descrições."
+          "description": "Gera clipes com 41 modelos: texto, fotogramas, referências, transferência de movimento, prolongar e editar clipes."
         },
         "image-generation": {
           "name": "Geração de imagens",
-          "description": "Gera imagens a partir de descrições, seguindo até três imagens de referência."
+          "description": "Gera imagens com 14 modelos, de pessoas fotorrealistas a tipografia e anúncios, seguindo imagens de referência quando o modelo as aceita."
         }
       },
       "settings": {
@@ -96,10 +222,140 @@
         },
         "video-model": {
           "label": "Modelo de vídeo",
-          "description": "O Kling 3.0 Standard é o predefinido. O Kling 3.0 Pro tem melhor aspeto e custa mais. O Seedance 2.0 segue as imagens e vídeos de referência que tu ou o agente anexarem; os modelos Kling animam uma única imagem."
+          "description": "O modelo usado quando nem tu nem o agente escolhem um. Gerar mostra para que serve melhor cada um.",
+          "choices": {
+            "cinema-studio-4.0": "Cinema Studio 4.0",
+            "genjutsu-motion-transfer": "Genjutsu Motion Transfer",
+            "genjutsu-object-swap": "Genjutsu Object Swap",
+            "grok-imagine-video-1.5": "Grok Imagine Video 1.5",
+            "happy-horse-1.0": "Happy Horse 1.0",
+            "happy-horse-1.0-reference": "Happy Horse 1.0 References",
+            "happy-horse-1.1": "Happy Horse 1.1",
+            "happy-horse-1.1-reference": "Happy Horse 1.1 References",
+            "kling-2.5-turbo-pro": "Kling 2.5 Turbo Pro",
+            "kling-2.5-turbo-std": "Kling 2.5 Turbo Standard",
+            "kling-2.6-motion-pro": "Kling 2.6 Motion Control Pro",
+            "kling-2.6-motion-std": "Kling 2.6 Motion Control Standard",
+            "kling-2.6-pro": "Kling 2.6 Pro",
+            "kling-3.0-4k": "Kling 3.0 4K",
+            "kling-3.0-motion-pro": "Kling 3.0 Motion Control Pro",
+            "kling-3.0-motion-std": "Kling 3.0 Motion Control Standard",
+            "kling-3.0-pro": "Kling 3.0 Pro",
+            "kling-3.0-std": "Kling 3.0 Standard",
+            "kling-3.0-turbo": "Kling 3.0 Turbo",
+            "kling-o3": "Kling O3",
+            "kling-o3-edit": "Kling O3 Edit",
+            "kling-o3-reference": "Kling O3 References",
+            "kling-omni": "Kling Omni",
+            "kling-omni-edit": "Kling Omni Edit",
+            "kling-omni-reference": "Kling Omni References",
+            "ltx-2.5-fast": "LTX-2.5 Fast",
+            "ltx-2.5-pro": "LTX-2.5 Pro",
+            "minimax-h3": "MiniMax H3",
+            "minimax-h3-reference": "MiniMax H3 References",
+            "seedance-2.0": "Seedance 2.0",
+            "seedance-2.0-reference": "Seedance 2.0 References",
+            "seedance-2.5": "Seedance 2.5",
+            "seedance-2.5-edit": "Seedance 2.5 Edit",
+            "seedance-2.5-extend": "Seedance 2.5 Extend",
+            "seedance-2.5-reference": "Seedance 2.5 References",
+            "wan-2.6": "Wan 2.6",
+            "wan-2.7-reference": "Wan 2.7 References",
+            "wan-3.0": "Wan 3.0",
+            "wan-3.0-prime": "Wan 3.0 Prime",
+            "wan-3.0-prime-reference": "Wan 3.0 Prime References",
+            "wan-3.0-reference": "Wan 3.0 References"
+          }
+        },
+        "image-model": {
+          "label": "Modelo de imagem",
+          "description": "O modelo usado quando nem tu nem o agente escolhem um. Gerar mostra para que serve melhor cada um.",
+          "choices": {
+            "grok-image-2": "Grok Image 2.0",
+            "ideogram-4": "Ideogram 4.0",
+            "marketing-studio": "Marketing Studio 2.0",
+            "marketing-studio-flare": "Marketing Studio 2.5 Flare",
+            "marketing-studio-sunburst": "Marketing Studio 2.5 Sunburst",
+            "qwen-image-3": "Qwen Image 3",
+            "recraft-4.1": "Recraft V4.1",
+            "recraft-4.1-pro": "Recraft V4.1 Pro",
+            "recraft-4.1-utility": "Recraft V4.1 Utility",
+            "recraft-4.1-utility-pro": "Recraft V4.1 Utility Pro",
+            "soul": "SOUL",
+            "soul-2": "SOUL 2",
+            "soul-cinema": "SOUL Cinema",
+            "z-image-turbo": "Z-Image Turbo"
+          }
         }
       },
       "iconNotice": "Higgsfield e o seu logótipo são marcas da Higgsfield AI."
+    },
+    "en": {
+      "settings": {
+        "video-model": {
+          "choices": {
+            "cinema-studio-4.0": "Cinema Studio 4.0",
+            "genjutsu-motion-transfer": "Genjutsu Motion Transfer",
+            "genjutsu-object-swap": "Genjutsu Object Swap",
+            "grok-imagine-video-1.5": "Grok Imagine Video 1.5",
+            "happy-horse-1.0": "Happy Horse 1.0",
+            "happy-horse-1.0-reference": "Happy Horse 1.0 References",
+            "happy-horse-1.1": "Happy Horse 1.1",
+            "happy-horse-1.1-reference": "Happy Horse 1.1 References",
+            "kling-2.5-turbo-pro": "Kling 2.5 Turbo Pro",
+            "kling-2.5-turbo-std": "Kling 2.5 Turbo Standard",
+            "kling-2.6-motion-pro": "Kling 2.6 Motion Control Pro",
+            "kling-2.6-motion-std": "Kling 2.6 Motion Control Standard",
+            "kling-2.6-pro": "Kling 2.6 Pro",
+            "kling-3.0-4k": "Kling 3.0 4K",
+            "kling-3.0-motion-pro": "Kling 3.0 Motion Control Pro",
+            "kling-3.0-motion-std": "Kling 3.0 Motion Control Standard",
+            "kling-3.0-pro": "Kling 3.0 Pro",
+            "kling-3.0-std": "Kling 3.0 Standard",
+            "kling-3.0-turbo": "Kling 3.0 Turbo",
+            "kling-o3": "Kling O3",
+            "kling-o3-edit": "Kling O3 Edit",
+            "kling-o3-reference": "Kling O3 References",
+            "kling-omni": "Kling Omni",
+            "kling-omni-edit": "Kling Omni Edit",
+            "kling-omni-reference": "Kling Omni References",
+            "ltx-2.5-fast": "LTX-2.5 Fast",
+            "ltx-2.5-pro": "LTX-2.5 Pro",
+            "minimax-h3": "MiniMax H3",
+            "minimax-h3-reference": "MiniMax H3 References",
+            "seedance-2.0": "Seedance 2.0",
+            "seedance-2.0-reference": "Seedance 2.0 References",
+            "seedance-2.5": "Seedance 2.5",
+            "seedance-2.5-edit": "Seedance 2.5 Edit",
+            "seedance-2.5-extend": "Seedance 2.5 Extend",
+            "seedance-2.5-reference": "Seedance 2.5 References",
+            "wan-2.6": "Wan 2.6",
+            "wan-2.7-reference": "Wan 2.7 References",
+            "wan-3.0": "Wan 3.0",
+            "wan-3.0-prime": "Wan 3.0 Prime",
+            "wan-3.0-prime-reference": "Wan 3.0 Prime References",
+            "wan-3.0-reference": "Wan 3.0 References"
+          }
+        },
+        "image-model": {
+          "choices": {
+            "grok-image-2": "Grok Image 2.0",
+            "ideogram-4": "Ideogram 4.0",
+            "marketing-studio": "Marketing Studio 2.0",
+            "marketing-studio-flare": "Marketing Studio 2.5 Flare",
+            "marketing-studio-sunburst": "Marketing Studio 2.5 Sunburst",
+            "qwen-image-3": "Qwen Image 3",
+            "recraft-4.1": "Recraft V4.1",
+            "recraft-4.1-pro": "Recraft V4.1 Pro",
+            "recraft-4.1-utility": "Recraft V4.1 Utility",
+            "recraft-4.1-utility-pro": "Recraft V4.1 Utility Pro",
+            "soul": "SOUL",
+            "soul-2": "SOUL 2",
+            "soul-cinema": "SOUL Cinema",
+            "z-image-turbo": "Z-Image Turbo"
+          }
+        }
+      }
     }
   }
 }

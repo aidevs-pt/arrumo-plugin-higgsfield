@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "pluginId": "higgsfield",
   "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
   "credentialSetting": "api-key",
@@ -45,139 +45,1908 @@
     "setting": "video-model"
   },
   "models": {
-    "kling-3.0-std": [
-      {
-        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
-        "aspectRatios": {
-          "16:9": "16:9",
-          "9:16": "9:16",
-          "1:1": "1:1"
-        },
-        "durations": {
-          "min": 3,
-          "max": 15,
-          "default": 5
-        },
-        "request": {
-          "prompt": "{prompt}",
-          "duration": "{duration}",
-          "aspect_ratio": "{aspectRatio}",
-          "sound": "off"
-        }
+    "cinema-studio-4.0": {
+      "label": "Cinema Studio 4.0",
+      "bestFor": {
+        "en": "Film-style shots of 4–30 s from text, up to nine images or three videos; the model picks lens, light and pacing.",
+        "es": "Planos de estilo cine de 4–30 s a partir de texto, hasta nueve imágenes o tres vídeos; el modelo elige lente, luz y ritmo.",
+        "pt": "Planos de estilo cinema de 4–30 s a partir de texto, até nove imagens ou três vídeos; o modelo escolhe lente, luz e ritmo."
       },
-      {
-        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/image-to-video",
-        "durations": {
-          "min": 3,
-          "max": 15,
-          "default": 5
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/higgsfield/cinema-studio/4.0",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "720p",
+            "generate_audio": false
+          }
         },
-        "request": {
-          "prompt": "{prompt}",
-          "image_url": "{image}",
-          "duration": "{duration}",
-          "sound": "off"
+        {
+          "endpoint": "https://api.higgsfield.ai/higgsfield/cinema-studio/4.0",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "720p",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
         },
-        "images": {
-          "min": 1,
-          "max": 1
+        {
+          "endpoint": "https://api.higgsfield.ai/higgsfield/cinema-studio/4.0",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "720p",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
         }
-      }
-    ],
-    "kling-3.0-pro": [
-      {
-        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/text-to-video",
-        "aspectRatios": {
-          "16:9": "16:9",
-          "9:16": "9:16",
-          "1:1": "1:1"
-        },
-        "durations": {
-          "min": 3,
-          "max": 15,
-          "default": 5
-        },
-        "request": {
-          "prompt": "{prompt}",
-          "duration": "{duration}",
-          "aspect_ratio": "{aspectRatio}",
-          "sound": "off"
-        }
+      ]
+    },
+    "genjutsu-motion-transfer": {
+      "label": "Genjutsu Motion Transfer",
+      "bestFor": {
+        "en": "Puts the people or characters from up to eight images into a source video's motion (at least 4 s; longer than 30 s is trimmed).",
+        "es": "Coloca a las personas o personajes de hasta ocho imágenes en el movimiento de un vídeo (mínimo 4 s; más de 30 s se recorta).",
+        "pt": "Coloca as pessoas ou personagens de até oito imagens no movimento de um vídeo (mínimo 4 s; acima de 30 s é cortado)."
       },
-      {
-        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/image-to-video",
-        "durations": {
-          "min": 3,
-          "max": 15,
-          "default": 5
-        },
-        "request": {
-          "prompt": "{prompt}",
-          "image_url": "{image}",
-          "duration": "{duration}",
-          "sound": "off"
-        },
-        "images": {
-          "min": 1,
-          "max": 1
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/higgsfield/genjutsu/motion-transfer/v1.0",
+          "request": {
+            "prompt": "{prompt}",
+            "video_url": "{video}",
+            "image_urls": "{images}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 8
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
         }
-      }
-    ],
-    "seedance-2.0": [
-      {
-        "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
-        "aspectRatios": {
-          "16:9": "16:9",
-          "9:16": "9:16",
-          "1:1": "1:1"
-        },
-        "durations": {
-          "min": 4,
-          "max": 15,
-          "default": 5
-        },
-        "request": {
-          "prompt": "{prompt}",
-          "image_urls": "{images}",
-          "video_urls": "{videos}",
-          "duration": "{duration}",
-          "aspect_ratio": "{aspectRatio}",
-          "generate_audio": false
-        },
-        "images": {
-          "min": 1,
-          "max": 9
-        },
-        "videos": {
-          "min": 0,
-          "max": 3
-        }
+      ]
+    },
+    "genjutsu-object-swap": {
+      "label": "Genjutsu Object Swap",
+      "bestFor": {
+        "en": "Replaces an object in a source video with the one in your images, keeping the shot's motion.",
+        "es": "Sustituye un objeto de un vídeo por el de tus imágenes, manteniendo el movimiento del plano.",
+        "pt": "Substitui um objeto de um vídeo pelo das tuas imagens, mantendo o movimento do plano."
       },
-      {
-        "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
-        "aspectRatios": {
-          "16:9": "16:9",
-          "9:16": "9:16",
-          "1:1": "1:1"
-        },
-        "durations": {
-          "min": 4,
-          "max": 15,
-          "default": 5
-        },
-        "request": {
-          "prompt": "{prompt}",
-          "video_urls": "{videos}",
-          "duration": "{duration}",
-          "aspect_ratio": "{aspectRatio}",
-          "generate_audio": false
-        },
-        "videos": {
-          "min": 1,
-          "max": 3
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/higgsfield/genjutsu/object-swap/v1.0",
+          "request": {
+            "prompt": "{prompt}",
+            "video_url": "{video}",
+            "image_urls": "{images}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 8
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
         }
-      }
-    ]
+      ]
+    },
+    "grok-imagine-video-1.5": {
+      "label": "Grok Imagine Video 1.5",
+      "bestFor": {
+        "en": "Short 720p clips of 1–15 s that start on one image or follow up to seven reference images.",
+        "es": "Clips cortos en 720p de 1–15 s que empiezan en una imagen o siguen hasta siete imágenes de referencia.",
+        "pt": "Clipes curtos em 720p de 1–15 s que começam numa imagem ou seguem até sete imagens de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/xai/grok-imagine-video/v1.5/reference-to-video",
+          "durations": {
+            "min": 1,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "resolution": "720p"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/xai/grok-imagine-video/v1.5/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 1,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "720p"
+          },
+          "images": {
+            "min": 2,
+            "max": 7
+          }
+        }
+      ]
+    },
+    "happy-horse-1.0": {
+      "label": "Happy Horse 1.0",
+      "bestFor": {
+        "en": "Alibaba's video model for 1080p clips of 2–15 s from text or a first frame.",
+        "es": "El modelo de vídeo de Alibaba para clips en 1080p de 2–15 s a partir de texto o un primer fotograma.",
+        "pt": "O modelo de vídeo da Alibaba para clipes em 1080p de 2–15 s a partir de texto ou um primeiro fotograma."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/image-to-video",
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "happy-horse-1.0-reference": {
+      "label": "Happy Horse 1.0 References",
+      "bestFor": {
+        "en": "Happy Horse following up to nine reference images of a subject or style.",
+        "es": "Happy Horse siguiendo hasta nueve imágenes de referencia de un sujeto o estilo.",
+        "pt": "Happy Horse seguindo até nove imagens de referência de um sujeito ou estilo."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/reference-to-video",
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    "happy-horse-1.1": {
+      "label": "Happy Horse 1.1",
+      "bestFor": {
+        "en": "The newer Happy Horse, 1080p by default, from text or a first frame.",
+        "es": "El Happy Horse más reciente, en 1080p por defecto, a partir de texto o un primer fotograma.",
+        "pt": "O Happy Horse mais recente, em 1080p por omissão, a partir de texto ou um primeiro fotograma."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/v1.1/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/v1.1/image-to-video",
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "happy-horse-1.1-reference": {
+      "label": "Happy Horse 1.1 References",
+      "bestFor": {
+        "en": "Happy Horse 1.1 following up to nine reference images.",
+        "es": "Happy Horse 1.1 siguiendo hasta nueve imágenes de referencia.",
+        "pt": "Happy Horse 1.1 seguindo até nove imagens de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/happy-horse/v1.1/reference-to-video",
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        }
+      ]
+    },
+    "kling-2.5-turbo-pro": {
+      "label": "Kling 2.5 Turbo Pro",
+      "bestFor": {
+        "en": "Quick, low-cost 5 or 10 s clips; from text it makes 16:9 only.",
+        "es": "Clips rápidos y económicos de 5 o 10 s; a partir de texto solo hace 16:9.",
+        "pt": "Clipes rápidos e económicos de 5 ou 10 s; a partir de texto só faz 16:9."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v2.5-turbo/pro/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9"
+          },
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v2.5-turbo/pro/image-to-video",
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-2.5-turbo-std": {
+      "label": "Kling 2.5 Turbo Standard",
+      "bestFor": {
+        "en": "The cheapest way to animate one image into a 5 or 10 s clip.",
+        "es": "La forma más barata de animar una imagen en un clip de 5 o 10 s.",
+        "pt": "A forma mais barata de animar uma imagem num clipe de 5 ou 10 s."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v2.5-turbo/standard/image-to-video",
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-2.6-motion-pro": {
+      "label": "Kling 2.6 Motion Control Pro",
+      "bestFor": {
+        "en": "Kling 2.6 motion transfer with more detail than Standard.",
+        "es": "Transferencia de movimiento de Kling 2.6 con más detalle que Standard.",
+        "pt": "Transferência de movimento do Kling 2.6 com mais detalhe do que o Standard."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/motion-control/pro",
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "video_url": "{video}",
+            "keep_original_sound": "no",
+            "character_orientation": "video"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-2.6-motion-std": {
+      "label": "Kling 2.6 Motion Control Standard",
+      "bestFor": {
+        "en": "The earlier motion transfer: an image's character follows a reference video's movement, at a lower price.",
+        "es": "La transferencia de movimiento anterior: el personaje de una imagen sigue el movimiento de un vídeo, a menor precio.",
+        "pt": "A transferência de movimento anterior: a personagem de uma imagem segue o movimento de um vídeo, a menor preço."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/motion-control/std",
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "video_url": "{video}",
+            "keep_original_sound": "no",
+            "character_orientation": "video"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-2.6-pro": {
+      "label": "Kling 2.6 Pro",
+      "bestFor": {
+        "en": "The previous Kling generation for 5 or 10 s clips from text or one image, when you want its look.",
+        "es": "La generación anterior de Kling para clips de 5 o 10 s a partir de texto o una imagen, si buscas su estilo.",
+        "pt": "A geração anterior do Kling para clipes de 5 ou 10 s a partir de texto ou uma imagem, se procuras o seu estilo."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v2.6/pro/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "sound": "off"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v2.6/pro/image-to-video",
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "sound": "off"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-3.0-4k": {
+      "label": "Kling 3.0 4K",
+      "bestFor": {
+        "en": "Kling 3.0 rendered in 4K, for big screens or crops in the edit; the most expensive Kling tier.",
+        "es": "Kling 3.0 en 4K, para pantallas grandes o recortes en la edición; el nivel de Kling más caro.",
+        "pt": "Kling 3.0 em 4K, para ecrãs grandes ou recortes na edição; o nível Kling mais caro."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/4k/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "sound": "off"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/4k/image-to-video",
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "last_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "sound": "off"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "kling-3.0-motion-pro": {
+      "label": "Kling 3.0 Motion Control Pro",
+      "bestFor": {
+        "en": "Moves the character in your image the way the person in a 3–30 s reference video moves; the clip runs as long as the video Pro keeps more detail.",
+        "es": "Mueve al personaje de tu imagen como se mueve la persona de un vídeo de referencia de 3–30 s; el clip dura lo mismo que el vídeo Pro conserva más detalle.",
+        "pt": "Move a personagem da tua imagem como se move a pessoa de um vídeo de referência de 3–30 s; o clipe dura o mesmo que o vídeo O Pro mantém mais detalhe."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3/motion-control/pro",
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "video_url": "{video}",
+            "keep_original_sound": "no",
+            "character_orientation": "video"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-3.0-motion-std": {
+      "label": "Kling 3.0 Motion Control Standard",
+      "bestFor": {
+        "en": "Moves the character in your image the way the person in a 3–30 s reference video moves; the clip runs as long as the video.",
+        "es": "Mueve al personaje de tu imagen como se mueve la persona de un vídeo de referencia de 3–30 s; el clip dura lo mismo que el vídeo.",
+        "pt": "Move a personagem da tua imagem como se move a pessoa de um vídeo de referência de 3–30 s; o clipe dura o mesmo que o vídeo."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3/motion-control/std",
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "video_url": "{video}",
+            "keep_original_sound": "no",
+            "character_orientation": "video"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-3.0-pro": {
+      "label": "Kling 3.0 Pro",
+      "bestFor": {
+        "en": "Hero shots that need cleaner detail and motion than Standard; same inputs, higher cost.",
+        "es": "Planos protagonistas que piden más detalle y mejor movimiento que Standard; mismas entradas, más coste.",
+        "pt": "Planos principais que pedem mais detalhe e melhor movimento do que o Standard; mesmas entradas, mais custo."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "sound": "off"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/image-to-video",
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "last_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "sound": "off"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "kling-3.0-std": {
+      "label": "Kling 3.0 Standard",
+      "bestFor": {
+        "en": "Everyday clips at a fair price: 3–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips del día a día a buen precio: 3–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes do dia a dia a bom preço: 3–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "sound": "off"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/image-to-video",
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "last_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "sound": "off"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "kling-3.0-turbo": {
+      "label": "Kling 3.0 Turbo",
+      "bestFor": {
+        "en": "Fast 1080p drafts from text or one image, with longer prompts (up to 3,000 characters).",
+        "es": "Borradores rápidos en 1080p a partir de texto o una imagen, con prompts más largos (hasta 3000 caracteres).",
+        "pt": "Rascunhos rápidos em 1080p a partir de texto ou uma imagem, com prompts mais longos (até 3000 caracteres)."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0-turbo/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/v3.0-turbo/image-to-video",
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-o3": {
+      "label": "Kling O3",
+      "bestFor": {
+        "en": "Clips that start on one image and can land on a second, 3–15 s.",
+        "es": "Clips que empiezan en una imagen y pueden terminar en otra, de 3–15 s.",
+        "pt": "Clipes que começam numa imagem e podem terminar noutra, de 3–15 s."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/o3/first-last-frame",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "first_frame_url": "{image}",
+            "last_frame_url": "{lastImage}",
+            "mode": "pro",
+            "sound": "off",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "kling-o3-edit": {
+      "label": "Kling O3 Edit",
+      "bestFor": {
+        "en": "Changes an existing 3–15 s clip with an instruction, such as swapping the setting or an object, optionally guided by images.",
+        "es": "Cambia un clip existente de 3–15 s con una instrucción, como sustituir el escenario o un objeto, guiado si quieres por imágenes.",
+        "pt": "Altera um clipe existente de 3–15 s com uma instrução, como trocar o cenário ou um objeto, guiado se quiseres por imagens."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/o3/video-edit",
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "image_urls": "{images}",
+            "mode": "pro"
+          },
+          "images": {
+            "min": 0,
+            "max": 4
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-o3-reference": {
+      "label": "Kling O3 References",
+      "bestFor": {
+        "en": "Keeps characters, products or places consistent from up to four images, or follows a reference video's camera and style.",
+        "es": "Mantiene coherentes personajes, productos o lugares a partir de hasta cuatro imágenes, o sigue la cámara y el estilo de un vídeo de referencia.",
+        "pt": "Mantém coerentes personagens, produtos ou lugares a partir de até quatro imagens, ou segue a câmara e o estilo de um vídeo de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/o3/image-reference",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "mode": "pro",
+            "sound": "off",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/o3/video-reference",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 10,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "image_urls": "{images}",
+            "mode": "pro",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 0,
+            "max": 4
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-omni": {
+      "label": "Kling Omni",
+      "bestFor": {
+        "en": "The earlier Omni model for 5 or 10 s clips between a first and an optional last frame.",
+        "es": "El modelo Omni anterior para clips de 5 o 10 s entre un primer fotograma y un último opcional.",
+        "pt": "O modelo Omni anterior para clipes de 5 ou 10 s entre um primeiro fotograma e um último opcional."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/omni/first-last-frame",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "first_frame_url": "{image}",
+            "last_frame_url": "{lastImage}",
+            "mode": "pro",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "kling-omni-edit": {
+      "label": "Kling Omni Edit",
+      "bestFor": {
+        "en": "Edits an existing 3–10 s clip with an instruction, optionally guided by images.",
+        "es": "Edita un clip existente de 3–10 s con una instrucción, guiado si quieres por imágenes.",
+        "pt": "Edita um clipe existente de 3–10 s com uma instrução, guiado se quiseres por imagens."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/omni/video-edit",
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "image_urls": "{images}",
+            "mode": "pro"
+          },
+          "images": {
+            "min": 0,
+            "max": 4
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "kling-omni-reference": {
+      "label": "Kling Omni References",
+      "bestFor": {
+        "en": "Omni with up to four reference images or one reference video, for consistent subjects at a lower price than O3.",
+        "es": "Omni con hasta cuatro imágenes o un vídeo de referencia, para sujetos coherentes a menor precio que O3.",
+        "pt": "Omni com até quatro imagens ou um vídeo de referência, para sujeitos coerentes a menor preço do que o O3."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/omni/image-reference",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 10,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "mode": "pro",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 1,
+            "max": 4
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/kling-video/omni/video-reference",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 3,
+            "max": 10,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "image_urls": "{images}",
+            "mode": "pro",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}"
+          },
+          "images": {
+            "min": 0,
+            "max": 4
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "ltx-2.5-fast": {
+      "label": "LTX-2.5 Fast",
+      "bestFor": {
+        "en": "Quick 6, 8 or 10 s drafts in 16:9 or 9:16, from text, a first frame or first and last frames.",
+        "es": "Borradores rápidos de 6, 8 o 10 s en 16:9 o 9:16, a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Rascunhos rápidos de 6, 8 ou 10 s em 16:9 ou 9:16, a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/lightricks/ltx-2.5/text-to-video/fast",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 6,
+            "max": 10,
+            "default": 6,
+            "allowed": [
+              6,
+              8,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "fps": 25,
+            "generate_audio": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/lightricks/ltx-2.5/image-to-video/fast",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 6,
+            "max": 10,
+            "default": 6,
+            "allowed": [
+              6,
+              8,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "fps": 25,
+            "generate_audio": false
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "ltx-2.5-pro": {
+      "label": "LTX-2.5 Pro",
+      "bestFor": {
+        "en": "Polished 6, 8 or 10 s clips in 16:9 or 9:16 from text or one image.",
+        "es": "Clips cuidados de 6, 8 o 10 s en 16:9 o 9:16 a partir de texto o una imagen.",
+        "pt": "Clipes cuidados de 6, 8 ou 10 s em 16:9 ou 9:16 a partir de texto ou uma imagem."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/lightricks/ltx-2.5/text-to-video/pro",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 6,
+            "max": 10,
+            "default": 6,
+            "allowed": [
+              6,
+              8,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "fps": 25,
+            "generate_audio": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/lightricks/ltx-2.5/image-to-video/pro",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 6,
+            "max": 10,
+            "default": 6,
+            "allowed": [
+              6,
+              8,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "fps": 25,
+            "generate_audio": false
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "minimax-h3": {
+      "label": "MiniMax H3",
+      "bestFor": {
+        "en": "Sharp 2K clips of 5–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips nítidos en 2K de 5–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes nítidos em 2K de 5–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/minimax/h3/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "2K",
+            "aigc_watermark": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/minimax/h3/image-to-video",
+          "durations": {
+            "min": 5,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "2K",
+            "aigc_watermark": false
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "minimax-h3-reference": {
+      "label": "MiniMax H3 References",
+      "bestFor": {
+        "en": "MiniMax H3 following up to nine images or three videos.",
+        "es": "MiniMax H3 siguiendo hasta nueve imágenes o tres vídeos.",
+        "pt": "MiniMax H3 seguindo até nove imagens ou três vídeos."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/minimax/h3/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "2K",
+            "aigc_watermark": false
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/minimax/h3/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "2K",
+            "aigc_watermark": false
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "seedance-2.0": {
+      "label": "Seedance 2.0",
+      "bestFor": {
+        "en": "Cinematic 1080p clips of 4–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips cinematográficos en 1080p de 4–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes cinematográficos em 1080p de 4–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/image-to-video",
+          "durations": {
+            "min": 4,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "1080p",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "seedance-2.0-reference": {
+      "label": "Seedance 2.0 References",
+      "bestFor": {
+        "en": "Follows up to nine reference images and three reference videos at once: characters, products, style and camera moves.",
+        "es": "Sigue a la vez hasta nueve imágenes y tres vídeos de referencia: personajes, productos, estilo y movimientos de cámara.",
+        "pt": "Segue ao mesmo tempo até nove imagens e três vídeos de referência: personagens, produtos, estilo e movimentos de câmara."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "seedance-2.5": {
+      "label": "Seedance 2.5",
+      "bestFor": {
+        "en": "Longer cinematic shots, up to 30 s, from text or frames, at high bitrate.",
+        "es": "Planos cinematográficos más largos, hasta 30 s, a partir de texto o fotogramas, con bitrate alto.",
+        "pt": "Planos cinematográficos mais longos, até 30 s, a partir de texto ou fotogramas, com bitrate alto."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "bitrate_mode": "high"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/image-to-video",
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "bitrate_mode": "high"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "seedance-2.5-edit": {
+      "label": "Seedance 2.5 Edit",
+      "bestFor": {
+        "en": "Edits an existing clip from an instruction, optionally with images of what to bring in.",
+        "es": "Edita un clip existente con una instrucción, con imágenes opcionales de lo que quieres añadir.",
+        "pt": "Edita um clipe existente com uma instrução, com imagens opcionais do que queres acrescentar."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/video-edit",
+          "request": {
+            "prompt": "{prompt}",
+            "video_url": "{video}",
+            "image_urls": "{images}",
+            "resolution": "1080p",
+            "bitrate_mode": "high",
+            "generate_audio": false
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "seedance-2.5-extend": {
+      "label": "Seedance 2.5 Extend",
+      "bestFor": {
+        "en": "Continues an existing clip by 4–30 s, picking up where it ends.",
+        "es": "Continúa un clip existente 4–30 s más, desde donde termina.",
+        "pt": "Continua um clipe existente mais 4–30 s, a partir de onde termina."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/video-extend",
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "video_url": "{video}",
+            "duration": "{duration}",
+            "resolution": "1080p",
+            "bitrate_mode": "high",
+            "generate_audio": false
+          },
+          "videos": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "seedance-2.5-reference": {
+      "label": "Seedance 2.5 References",
+      "bestFor": {
+        "en": "Seedance 2.5 following up to nine images and three videos, for long consistent shots up to 30 s.",
+        "es": "Seedance 2.5 siguiendo hasta nueve imágenes y tres vídeos, para planos largos y coherentes de hasta 30 s.",
+        "pt": "Seedance 2.5 seguindo até nove imagens e três vídeos, para planos longos e coerentes até 30 s."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "bitrate_mode": "high"
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.5/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 4,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "bitrate_mode": "high"
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "wan-2.6": {
+      "label": "Wan 2.6",
+      "bestFor": {
+        "en": "Animates one image into a 5, 10 or 15 s 1080p clip.",
+        "es": "Anima una imagen en un clip en 1080p de 5, 10 o 15 s.",
+        "pt": "Anima uma imagem num clipe em 1080p de 5, 10 ou 15 s."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.6/image-to-video",
+          "durations": {
+            "min": 5,
+            "max": 15,
+            "default": 5,
+            "allowed": [
+              5,
+              10,
+              15
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
+    "wan-2.7-reference": {
+      "label": "Wan 2.7 References",
+      "bestFor": {
+        "en": "2–10 s 1080p clips in 16:9 or 9:16 that follow up to five reference images or videos.",
+        "es": "Clips en 1080p de 2–10 s en 16:9 o 9:16 que siguen hasta cinco imágenes o vídeos de referencia.",
+        "pt": "Clipes em 1080p de 2–10 s em 16:9 ou 9:16 que seguem até cinco imagens ou vídeos de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.7/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 2,
+            "max": 10,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 5
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.7/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16"
+          },
+          "durations": {
+            "min": 2,
+            "max": 10,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 0,
+            "max": 2
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "wan-3.0": {
+      "label": "Wan 3.0",
+      "bestFor": {
+        "en": "Long 1080p clips, 2–30 s, from text, a first frame, or first and last frames.",
+        "es": "Clips largos en 1080p, de 2–30 s, a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes longos em 1080p, de 2–30 s, a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0/image-to-video",
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "wan-3.0-prime": {
+      "label": "Wan 3.0 Prime",
+      "bestFor": {
+        "en": "The premium Wan 3.0 tier for long 1080p clips where quality matters more than cost.",
+        "es": "El nivel premium de Wan 3.0 para clips largos en 1080p cuando la calidad importa más que el coste.",
+        "pt": "O nível premium do Wan 3.0 para clipes longos em 1080p quando a qualidade importa mais do que o custo."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0-prime/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0-prime/image-to-video",
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    "wan-3.0-prime-reference": {
+      "label": "Wan 3.0 Prime References",
+      "bestFor": {
+        "en": "Wan 3.0 Prime with up to nine images and three videos as references.",
+        "es": "Wan 3.0 Prime con hasta nueve imágenes y tres vídeos de referencia.",
+        "pt": "Wan 3.0 Prime com até nove imagens e três vídeos de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0-prime/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0-prime/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "wan-3.0-reference": {
+      "label": "Wan 3.0 References",
+      "bestFor": {
+        "en": "Wan 3.0 following up to nine images and three videos for consistent subjects in long shots.",
+        "es": "Wan 3.0 siguiendo hasta nueve imágenes y tres vídeos para sujetos coherentes en planos largos.",
+        "pt": "Wan 3.0 seguindo até nove imagens e três vídeos para sujeitos coerentes em planos longos."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 1,
+            "max": 9
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/alibaba/wan-3.0/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 30,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_urls": "{images}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false,
+            "enable_thinking": false
+          },
+          "images": {
+            "min": 0,
+            "max": 9
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    }
   },
   "upload": {
     "endpoint": "https://api.higgsfield.ai/files/generate-upload-url",

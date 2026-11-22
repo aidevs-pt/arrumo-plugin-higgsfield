@@ -1,12 +1,13 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "pluginId": "higgsfield",
   "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/text-to-image",
   "credentialSetting": "api-key",
   "credentialHeader": "authorization",
   "credentialPrefix": "Key ",
   "model": {
-    "default": "qwen-image-3"
+    "default": "qwen-image-3",
+    "setting": "image-model"
   },
   "aspectRatios": {
     "16:9": "16:9",
@@ -55,5 +56,363 @@
     "uploadUrl": "/upload_url",
     "publicUrl": "/public_url",
     "headers": "/upload_headers"
+  },
+  "models": {
+    "grok-image-2": {
+      "label": "Grok Image 2.0",
+      "bestFor": {
+        "en": "Generates or edits with many references (up to eight here), for combining people, products and places.",
+        "es": "Genera o edita con muchas referencias (hasta ocho aquí), para combinar personas, productos y lugares.",
+        "pt": "Gera ou edita com muitas referências (até oito aqui), para combinar pessoas, produtos e lugares."
+      },
+      "endpoint": "https://api.higgsfield.ai/xai/grok-imagine-image-2.0",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "medium",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/xai/grok-imagine-image-2.0",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "ideogram-4": {
+      "label": "Ideogram 4.0",
+      "bestFor": {
+        "en": "Typography first: posters, titles and thumbnails with exact lettering; remixes one reference image.",
+        "es": "La tipografía primero: carteles, títulos y miniaturas con letras exactas; remezcla una imagen de referencia.",
+        "pt": "A tipografia primeiro: cartazes, títulos e miniaturas com letras exatas; remistura uma imagem de referência."
+      },
+      "endpoint": "https://api.higgsfield.ai/ideogram/v4.0",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "rendering_speed": "DEFAULT"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/ideogram/v4.0",
+        "field": "image_url",
+        "maxImages": 1,
+        "single": true
+      }
+    },
+    "marketing-studio": {
+      "label": "Marketing Studio 2.0",
+      "bestFor": {
+        "en": "Campaign and ad images, built around your product photos (up to eight references).",
+        "es": "Imágenes de campañas y anuncios, construidas alrededor de las fotos de tu producto (hasta ocho referencias).",
+        "pt": "Imagens de campanhas e anúncios, construídas à volta das fotografias do teu produto (até oito referências)."
+      },
+      "endpoint": "https://api.higgsfield.ai/marketing-studio/image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/marketing-studio/image",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "marketing-studio-flare": {
+      "label": "Marketing Studio 2.5 Flare",
+      "bestFor": {
+        "en": "The newer campaign model for polished ads from product photos.",
+        "es": "El modelo de campañas más reciente para anuncios cuidados a partir de fotos de producto.",
+        "pt": "O modelo de campanhas mais recente para anúncios cuidados a partir de fotografias de produto."
+      },
+      "endpoint": "https://api.higgsfield.ai/marketing-studio/image/flare",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/marketing-studio/image/flare",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "marketing-studio-sunburst": {
+      "label": "Marketing Studio 2.5 Sunburst",
+      "bestFor": {
+        "en": "Marketing Studio 2.5's other look, for bright, high-energy campaign images.",
+        "es": "El otro estilo de Marketing Studio 2.5, para imágenes de campaña luminosas y con energía.",
+        "pt": "O outro estilo do Marketing Studio 2.5, para imagens de campanha luminosas e com energia."
+      },
+      "endpoint": "https://api.higgsfield.ai/marketing-studio/image/sunburst",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/marketing-studio/image/sunburst",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "qwen-image-3": {
+      "label": "Qwen Image 3",
+      "bestFor": {
+        "en": "Reliable 2K images with clean text in the picture; edits up to three reference images.",
+        "es": "Imágenes fiables en 2K con texto limpio dentro de la imagen; edita hasta tres imágenes de referencia.",
+        "pt": "Imagens fiáveis em 2K com texto limpo dentro da imagem; edita até três imagens de referência."
+      },
+      "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/edit",
+        "field": "image_urls",
+        "maxImages": 3
+      }
+    },
+    "recraft-4.1": {
+      "label": "Recraft V4.1",
+      "bestFor": {
+        "en": "Design-led 1K images: illustrations, icons and brand graphics.",
+        "es": "Imágenes de diseño en 1K: ilustraciones, iconos y gráficos de marca.",
+        "pt": "Imagens de design em 1K: ilustrações, ícones e gráficos de marca."
+      },
+      "endpoint": "https://api.higgsfield.ai/recraft/v4.1/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "1k",
+        "output_format": "png"
+      }
+    },
+    "recraft-4.1-pro": {
+      "label": "Recraft V4.1 Pro",
+      "bestFor": {
+        "en": "Recraft's design-led look at 2K, for print or large layouts.",
+        "es": "El estilo de diseño de Recraft en 2K, para impresión o maquetas grandes.",
+        "pt": "O estilo de design da Recraft em 2K, para impressão ou paginações grandes."
+      },
+      "endpoint": "https://api.higgsfield.ai/recraft/v4.1/pro/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k",
+        "output_format": "png"
+      }
+    },
+    "recraft-4.1-utility": {
+      "label": "Recraft V4.1 Utility",
+      "bestFor": {
+        "en": "Plain, practical 1K images such as product shots, backgrounds and diagrams.",
+        "es": "Imágenes prácticas en 1K, como fotos de producto, fondos y diagramas.",
+        "pt": "Imagens práticas em 1K, como fotografias de produto, fundos e diagramas."
+      },
+      "endpoint": "https://api.higgsfield.ai/recraft/v4.1/utility/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "1k",
+        "output_format": "png"
+      }
+    },
+    "recraft-4.1-utility-pro": {
+      "label": "Recraft V4.1 Utility Pro",
+      "bestFor": {
+        "en": "Recraft Utility at 2K.",
+        "es": "Recraft Utility en 2K.",
+        "pt": "Recraft Utility em 2K."
+      },
+      "endpoint": "https://api.higgsfield.ai/recraft/v4.1/utility/pro/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k",
+        "output_format": "png"
+      }
+    },
+    "soul": {
+      "label": "SOUL",
+      "bestFor": {
+        "en": "Higgsfield's photographic model for realistic, fashion-style shots of people.",
+        "es": "El modelo fotográfico de Higgsfield para fotos realistas de personas, con estilo de moda.",
+        "pt": "O modelo fotográfico da Higgsfield para fotografias realistas de pessoas, com estilo de moda."
+      },
+      "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/standard",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "1080p",
+        "batch_size": 1
+      }
+    },
+    "soul-2": {
+      "label": "SOUL 2",
+      "bestFor": {
+        "en": "The newer SOUL for realistic people and lifestyle photos.",
+        "es": "El SOUL más reciente para fotos realistas de personas y estilo de vida.",
+        "pt": "O SOUL mais recente para fotografias realistas de pessoas e estilo de vida."
+      },
+      "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/v2/standard",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "1080p",
+        "batch_size": 1
+      }
+    },
+    "soul-cinema": {
+      "label": "SOUL Cinema",
+      "bestFor": {
+        "en": "Film-still looks: cinematic light and colour for moody scenes and thumbnails.",
+        "es": "Aspecto de fotograma de película: luz y color cinematográficos para escenas con atmósfera y miniaturas.",
+        "pt": "Aspeto de fotograma de filme: luz e cor cinematográficas para cenas com atmosfera e miniaturas."
+      },
+      "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/cinema",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "1080p",
+        "batch_size": 1
+      }
+    },
+    "z-image-turbo": {
+      "label": "Z-Image Turbo",
+      "bestFor": {
+        "en": "Fast, cheap 2K drafts from short descriptions (up to 800 characters).",
+        "es": "Borradores rápidos y baratos en 2K a partir de descripciones cortas (hasta 800 caracteres).",
+        "pt": "Rascunhos rápidos e baratos em 2K a partir de descrições curtas (até 800 caracteres)."
+      },
+      "endpoint": "https://api.higgsfield.ai/z-image/turbo",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k"
+      }
+    }
   }
 }
