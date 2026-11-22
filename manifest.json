@@ -18,6 +18,20 @@
       "scope": "workspace",
       "required": true,
       "helpUrl": "https://console.higgsfield.ai/"
+    },
+    {
+      "id": "video-model",
+      "label": "Video model",
+      "description": "Kling 3.0 Standard is the default. Kling 3.0 Pro looks better and costs more. Seedance 2.0 follows reference images and videos you or the agent attach; the Kling models animate a single image.",
+      "kind": "string",
+      "scope": "workspace",
+      "required": false,
+      "choices": [
+        "kling-3.0-std",
+        "kling-3.0-pro",
+        "seedance-2.0"
+      ],
+      "default": "kling-3.0-std"
     }
   ],
   "introduction": {
@@ -47,6 +61,10 @@
         "api-key": {
           "label": "Clave de API de Higgsfield",
           "description": "Pégala como ID_DE_CLAVE:SECRETO desde la consola de Higgsfield. Se usa para los clips generados. Se guarda en el almacén del sistema; los agentes pueden usarla a través de Arrumo, pero nunca leerla."
+        },
+        "video-model": {
+          "label": "Modelo de vídeo",
+          "description": "Kling 3.0 Standard es el predeterminado. Kling 3.0 Pro se ve mejor y cuesta más. Seedance 2.0 sigue las imágenes y vídeos de referencia que adjuntes tú o el agente; los modelos Kling animan una sola imagen."
         }
       },
       "iconNotice": "Higgsfield y su logotipo son marcas de Higgsfield AI."
@@ -63,6 +81,10 @@
         "api-key": {
           "label": "Chave de API da Higgsfield",
           "description": "Cole-a como ID_DA_CHAVE:SEGREDO a partir da consola Higgsfield. Usada para os clipes gerados. Fica guardada no cofre do sistema; os agentes podem usá-la através do Arrumo, mas nunca lê-la."
+        },
+        "video-model": {
+          "label": "Modelo de vídeo",
+          "description": "O Kling 3.0 Standard é o predefinido. O Kling 3.0 Pro tem melhor aspeto e custa mais. O Seedance 2.0 segue as imagens e vídeos de referência que tu ou o agente anexarem; os modelos Kling animam uma única imagem."
         }
       },
       "iconNotice": "Higgsfield e o seu logótipo são marcas da Higgsfield AI."

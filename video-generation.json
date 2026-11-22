@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "pluginId": "higgsfield",
   "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
   "credentialSetting": "api-key",
@@ -26,12 +26,166 @@
   },
   "status": {
     "state": "/status",
-    "completed": ["completed"],
-    "failed": ["failed", "nsfw", "canceled"],
+    "completed": [
+      "completed"
+    ],
+    "failed": [
+      "failed",
+      "nsfw",
+      "canceled"
+    ],
     "video": "/video/url",
     "error": "/error"
   },
   "pollSeconds": 5,
   "timeoutSeconds": 900,
-  "maxVideoBytes": 209715200
+  "maxVideoBytes": 209715200,
+  "model": {
+    "default": "kling-3.0-std",
+    "setting": "video-model"
+  },
+  "models": {
+    "kling-3.0-std": [
+      {
+        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
+        "aspectRatios": {
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "1:1": "1:1"
+        },
+        "durations": {
+          "min": 3,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "duration": "{duration}",
+          "aspect_ratio": "{aspectRatio}",
+          "sound": "off"
+        }
+      },
+      {
+        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/image-to-video",
+        "durations": {
+          "min": 3,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "image_url": "{image}",
+          "duration": "{duration}",
+          "sound": "off"
+        },
+        "images": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "kling-3.0-pro": [
+      {
+        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/text-to-video",
+        "aspectRatios": {
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "1:1": "1:1"
+        },
+        "durations": {
+          "min": 3,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "duration": "{duration}",
+          "aspect_ratio": "{aspectRatio}",
+          "sound": "off"
+        }
+      },
+      {
+        "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/pro/image-to-video",
+        "durations": {
+          "min": 3,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "image_url": "{image}",
+          "duration": "{duration}",
+          "sound": "off"
+        },
+        "images": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "seedance-2.0": [
+      {
+        "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
+        "aspectRatios": {
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "1:1": "1:1"
+        },
+        "durations": {
+          "min": 4,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "image_urls": "{images}",
+          "video_urls": "{videos}",
+          "duration": "{duration}",
+          "aspect_ratio": "{aspectRatio}",
+          "generate_audio": false
+        },
+        "images": {
+          "min": 1,
+          "max": 9
+        },
+        "videos": {
+          "min": 0,
+          "max": 3
+        }
+      },
+      {
+        "endpoint": "https://api.higgsfield.ai/bytedance/seedance-2.0/reference-to-video",
+        "aspectRatios": {
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "1:1": "1:1"
+        },
+        "durations": {
+          "min": 4,
+          "max": 15,
+          "default": 5
+        },
+        "request": {
+          "prompt": "{prompt}",
+          "video_urls": "{videos}",
+          "duration": "{duration}",
+          "aspect_ratio": "{aspectRatio}",
+          "generate_audio": false
+        },
+        "videos": {
+          "min": 1,
+          "max": 3
+        }
+      }
+    ]
+  },
+  "upload": {
+    "endpoint": "https://api.higgsfield.ai/files/generate-upload-url",
+    "request": {
+      "content_type": "{contentType}"
+    },
+    "uploadUrl": "/upload_url",
+    "publicUrl": "/public_url",
+    "headers": "/upload_headers"
+  }
 }

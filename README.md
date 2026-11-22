@@ -2,18 +2,28 @@
 
 The default Higgsfield adapter for generated video assets.
 
-`video-generation.json` describes Higgsfield's Kling 3.0 Standard text-to-video
-endpoint with the [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter).
-Arrumo submits the prompt, ratio (16:9, 9:16 or 1:1) and length (3 to 15
-seconds, silent), polls the job, downloads the finished MP4 and adds it to the
-workspace assets. Creators and agents ask for clips from **Assets › Generate ›
-Video clip** or the `generate_library_video` operation.
+`video-generation.json` is a schema 2 [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter)
+with three models, chosen in the plugin's **Video model** setting or per clip:
+
+| Model | Without references | With references | Length |
+| --- | --- | --- | --- |
+| `kling-3.0-std` (default) | Text to video | One image to animate | 3–15 s |
+| `kling-3.0-pro` | Text to video | One image to animate | 3–15 s |
+| `seedance-2.0` | Not available | 1–9 images and up to 3 videos, or 1–3 videos | 4–15 s |
+
+Arrumo submits the prompt, ratio (16:9, 9:16 or 1:1; an animated image keeps
+its own shape) and length, silent. Reference files are workspace assets: Arrumo
+uploads each through Higgsfield's presigned upload and passes the returned
+address. It polls the job, downloads the finished MP4 and adds it to the
+workspace assets. Creators pick models and references in **Assets › Generate ›
+Video clip**; agents use `list_video_models` and `generate_library_video`.
 
 ## Key
 
 Create an API key in the [Higgsfield console](https://console.higgsfield.ai/) and paste it into the plugin's
 **Higgsfield API key** setting as `KEY_ID:KEY_SECRET`. Arrumo keeps it in the
-system vault and sends it only to `api.higgsfield.ai`. Each clip uses your
+system vault and sends it only to `api.higgsfield.ai`; reference uploads go to
+the presigned storage address without it. Each clip uses your
 Higgsfield credits; a job fails with `not_enough_credits` when the account is
 empty.
 
