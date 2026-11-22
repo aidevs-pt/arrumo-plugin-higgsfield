@@ -236,6 +236,37 @@
         }
       ]
     },
+    "hailuo-2.3": {
+      "label": "Hailuo 2.3 Standard",
+      "bestFor": {
+        "en": "Animates one image into a 6 or 10 s clip at 768p.",
+        "es": "Anima una imagen en un clip de 6 o 10 s a 768p.",
+        "pt": "Anima uma imagem num clipe de 6 ou 10 s a 768p."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/minimax/hailuo-2.3/standard/image-to-video",
+          "durations": {
+            "min": 6,
+            "max": 10,
+            "default": 6,
+            "allowed": [
+              6,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "duration": "{duration}"
+          },
+          "images": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    },
     "happy-horse-1.0": {
       "label": "Happy Horse 1.0",
       "bestFor": {
@@ -389,9 +420,9 @@
     "kling-2.5-turbo-pro": {
       "label": "Kling 2.5 Turbo Pro",
       "bestFor": {
-        "en": "Quick, low-cost 5 or 10 s clips; from text it makes 16:9 only.",
-        "es": "Clips rápidos y económicos de 5 o 10 s; a partir de texto solo hace 16:9.",
-        "pt": "Clipes rápidos e económicos de 5 ou 10 s; a partir de texto só faz 16:9."
+        "en": "5 or 10 s clips from text or one image. Its text API takes no size, so Arrumo asks it for 16:9 only.",
+        "es": "Clips de 5 o 10 s a partir de texto o una imagen. Su API de texto no admite tamaño, así que Arrumo solo le pide 16:9.",
+        "pt": "Clipes de 5 ou 10 s a partir de texto ou uma imagem. A sua API de texto não aceita tamanho, por isso o Arrumo só lhe pede 16:9."
       },
       "variants": [
         {
@@ -439,9 +470,9 @@
     "kling-2.5-turbo-std": {
       "label": "Kling 2.5 Turbo Standard",
       "bestFor": {
-        "en": "The cheapest way to animate one image into a 5 or 10 s clip.",
-        "es": "La forma más barata de animar una imagen en un clip de 5 o 10 s.",
-        "pt": "A forma mais barata de animar uma imagem num clipe de 5 ou 10 s."
+        "en": "Animates one image into a 5 or 10 s clip, at the Turbo Standard tier.",
+        "es": "Anima una imagen en un clip de 5 o 10 s, en el nivel Turbo Standard.",
+        "pt": "Anima uma imagem num clipe de 5 ou 10 s, no nível Turbo Standard."
       },
       "variants": [
         {
@@ -470,9 +501,9 @@
     "kling-2.6-motion-pro": {
       "label": "Kling 2.6 Motion Control Pro",
       "bestFor": {
-        "en": "Kling 2.6 motion transfer with more detail than Standard.",
-        "es": "Transferencia de movimiento de Kling 2.6 con más detalle que Standard.",
-        "pt": "Transferência de movimento do Kling 2.6 com mais detalhe do que o Standard."
+        "en": "Kling 2.6 motion transfer at the Pro tier.",
+        "es": "Transferencia de movimiento de Kling 2.6 en el nivel Pro.",
+        "pt": "Transferência de movimento do Kling 2.6 no nível Pro."
       },
       "variants": [
         {
@@ -498,9 +529,9 @@
     "kling-2.6-motion-std": {
       "label": "Kling 2.6 Motion Control Standard",
       "bestFor": {
-        "en": "The earlier motion transfer: an image's character follows a reference video's movement, at a lower price.",
-        "es": "La transferencia de movimiento anterior: el personaje de una imagen sigue el movimiento de un vídeo, a menor precio.",
-        "pt": "A transferência de movimento anterior: a personagem de uma imagem segue o movimento de um vídeo, a menor preço."
+        "en": "Kling 2.6 motion transfer: an image's character follows a 3–30 s reference video's movement.",
+        "es": "Transferencia de movimiento de Kling 2.6: el personaje de una imagen sigue el movimiento de un vídeo de 3–30 s.",
+        "pt": "Transferência de movimento do Kling 2.6: a personagem de uma imagem segue o movimento de um vídeo de 3–30 s."
       },
       "variants": [
         {
@@ -526,9 +557,9 @@
     "kling-2.6-pro": {
       "label": "Kling 2.6 Pro",
       "bestFor": {
-        "en": "The previous Kling generation for 5 or 10 s clips from text or one image, when you want its look.",
-        "es": "La generación anterior de Kling para clips de 5 o 10 s a partir de texto o una imagen, si buscas su estilo.",
-        "pt": "A geração anterior do Kling para clipes de 5 ou 10 s a partir de texto ou uma imagem, se procuras o seu estilo."
+        "en": "The previous Kling generation: 5 or 10 s clips from text or one image.",
+        "es": "La generación anterior de Kling: clips de 5 o 10 s a partir de texto o una imagen.",
+        "pt": "A geração anterior do Kling: clipes de 5 ou 10 s a partir de texto ou uma imagem."
       },
       "variants": [
         {
@@ -581,9 +612,9 @@
     "kling-3.0-4k": {
       "label": "Kling 3.0 4K",
       "bestFor": {
-        "en": "Kling 3.0 rendered in 4K, for big screens or crops in the edit; the most expensive Kling tier.",
-        "es": "Kling 3.0 en 4K, para pantallas grandes o recortes en la edición; el nivel de Kling más caro.",
-        "pt": "Kling 3.0 em 4K, para ecrãs grandes ou recortes na edição; o nível Kling mais caro."
+        "en": "Kling 3.0 rendered in 4K, for big screens or crops in the edit.",
+        "es": "Kling 3.0 en 4K, para pantallas grandes o recortes en la edición.",
+        "pt": "Kling 3.0 em 4K, para ecrãs grandes ou recortes na edição."
       },
       "variants": [
         {
@@ -629,9 +660,9 @@
     "kling-3.0-motion-pro": {
       "label": "Kling 3.0 Motion Control Pro",
       "bestFor": {
-        "en": "Moves the character in your image the way the person in a 3–30 s reference video moves; the clip runs as long as the video Pro keeps more detail.",
-        "es": "Mueve al personaje de tu imagen como se mueve la persona de un vídeo de referencia de 3–30 s; el clip dura lo mismo que el vídeo Pro conserva más detalle.",
-        "pt": "Move a personagem da tua imagem como se move a pessoa de um vídeo de referência de 3–30 s; o clipe dura o mesmo que o vídeo O Pro mantém mais detalhe."
+        "en": "Kling 3.0 motion transfer at the Pro tier: an image's character follows a 3–30 s reference video.",
+        "es": "Transferencia de movimiento de Kling 3.0 en el nivel Pro: el personaje de una imagen sigue un vídeo de 3–30 s.",
+        "pt": "Transferência de movimento do Kling 3.0 no nível Pro: a personagem de uma imagem segue um vídeo de 3–30 s."
       },
       "variants": [
         {
@@ -685,9 +716,9 @@
     "kling-3.0-pro": {
       "label": "Kling 3.0 Pro",
       "bestFor": {
-        "en": "Hero shots that need cleaner detail and motion than Standard; same inputs, higher cost.",
-        "es": "Planos protagonistas que piden más detalle y mejor movimiento que Standard; mismas entradas, más coste.",
-        "pt": "Planos principais que pedem mais detalhe e melhor movimento do que o Standard; mesmas entradas, mais custo."
+        "en": "Kling 3.0's Pro tier, above Standard, with the same inputs.",
+        "es": "El nivel Pro de Kling 3.0, por encima de Standard, con las mismas entradas.",
+        "pt": "O nível Pro do Kling 3.0, acima do Standard, com as mesmas entradas."
       },
       "variants": [
         {
@@ -733,9 +764,9 @@
     "kling-3.0-std": {
       "label": "Kling 3.0 Standard",
       "bestFor": {
-        "en": "Everyday clips at a fair price: 3–15 s from text, a first frame, or first and last frames.",
-        "es": "Clips del día a día a buen precio: 3–15 s a partir de texto, un primer fotograma o el primero y el último.",
-        "pt": "Clipes do dia a dia a bom preço: 3–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+        "en": "Kling 3.0's Standard tier: 3–15 s from text, a first frame, or first and last frames.",
+        "es": "El nivel Standard de Kling 3.0: 3–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "O nível Standard do Kling 3.0: 3–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
       },
       "variants": [
         {
@@ -781,9 +812,9 @@
     "kling-3.0-turbo": {
       "label": "Kling 3.0 Turbo",
       "bestFor": {
-        "en": "Fast 1080p drafts from text or one image, with longer prompts (up to 3,000 characters).",
-        "es": "Borradores rápidos en 1080p a partir de texto o una imagen, con prompts más largos (hasta 3000 caracteres).",
-        "pt": "Rascunhos rápidos em 1080p a partir de texto ou uma imagem, com prompts mais longos (até 3000 caracteres)."
+        "en": "Kling 3.0's Turbo tier: 1080p clips from text or one image, with prompts up to 3,000 characters.",
+        "es": "El nivel Turbo de Kling 3.0: clips en 1080p a partir de texto o una imagen, con prompts de hasta 3000 caracteres.",
+        "pt": "O nível Turbo do Kling 3.0: clipes em 1080p a partir de texto ou uma imagem, com prompts até 3000 caracteres."
       },
       "variants": [
         {
@@ -1021,9 +1052,9 @@
     "kling-omni-reference": {
       "label": "Kling Omni References",
       "bestFor": {
-        "en": "Omni with up to four reference images or one reference video, for consistent subjects at a lower price than O3.",
-        "es": "Omni con hasta cuatro imágenes o un vídeo de referencia, para sujetos coherentes a menor precio que O3.",
-        "pt": "Omni com até quatro imagens ou um vídeo de referência, para sujeitos coerentes a menor preço do que o O3."
+        "en": "Omni with up to four reference images or one reference video, for consistent subjects.",
+        "es": "Omni con hasta cuatro imágenes o un vídeo de referencia, para sujetos coherentes.",
+        "pt": "Omni com até quatro imagens ou um vídeo de referência, para sujeitos coerentes."
       },
       "variants": [
         {
@@ -1084,9 +1115,9 @@
     "ltx-2.5-fast": {
       "label": "LTX-2.5 Fast",
       "bestFor": {
-        "en": "Quick 6, 8 or 10 s drafts in 16:9 or 9:16, from text, a first frame or first and last frames.",
-        "es": "Borradores rápidos de 6, 8 o 10 s en 16:9 o 9:16, a partir de texto, un primer fotograma o el primero y el último.",
-        "pt": "Rascunhos rápidos de 6, 8 ou 10 s em 16:9 ou 9:16, a partir de texto, um primeiro fotograma ou o primeiro e o último."
+        "en": "LTX-2.5's Fast tier: 6, 8 or 10 s in 16:9 or 9:16, from text, a first frame or first and last frames.",
+        "es": "El nivel Fast de LTX-2.5: 6, 8 o 10 s en 16:9 o 9:16, a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "O nível Fast do LTX-2.5: 6, 8 ou 10 s em 16:9 ou 9:16, a partir de texto, um primeiro fotograma ou o primeiro e o último."
       },
       "variants": [
         {
@@ -1150,9 +1181,9 @@
     "ltx-2.5-pro": {
       "label": "LTX-2.5 Pro",
       "bestFor": {
-        "en": "Polished 6, 8 or 10 s clips in 16:9 or 9:16 from text or one image.",
-        "es": "Clips cuidados de 6, 8 o 10 s en 16:9 o 9:16 a partir de texto o una imagen.",
-        "pt": "Clipes cuidados de 6, 8 ou 10 s em 16:9 ou 9:16 a partir de texto ou uma imagem."
+        "en": "LTX-2.5's Pro tier: 6, 8 or 10 s in 16:9 or 9:16 from text or one image.",
+        "es": "El nivel Pro de LTX-2.5: 6, 8 o 10 s en 16:9 o 9:16 a partir de texto o una imagen.",
+        "pt": "O nível Pro do LTX-2.5: 6, 8 ou 10 s em 16:9 ou 9:16 a partir de texto ou uma imagem."
       },
       "variants": [
         {
@@ -1215,9 +1246,9 @@
     "minimax-h3": {
       "label": "MiniMax H3",
       "bestFor": {
-        "en": "Sharp 2K clips of 5–15 s from text, a first frame, or first and last frames.",
-        "es": "Clips nítidos en 2K de 5–15 s a partir de texto, un primer fotograma o el primero y el último.",
-        "pt": "Clipes nítidos em 2K de 5–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+        "en": "2K clips of 5–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips en 2K de 5–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes em 2K de 5–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
       },
       "variants": [
         {
@@ -1322,12 +1353,42 @@
         }
       ]
     },
+    "pixverse-v6": {
+      "label": "PixVerse V6",
+      "bestFor": {
+        "en": "1080p clips of 1–15 s from text.",
+        "es": "Clips en 1080p de 1–15 s a partir de texto.",
+        "pt": "Clipes em 1080p de 1–15 s a partir de texto."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/pixverse/v6/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 1,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p",
+            "generate_audio": false
+          }
+        }
+      ]
+    },
     "seedance-2.0": {
       "label": "Seedance 2.0",
       "bestFor": {
-        "en": "Cinematic 1080p clips of 4–15 s from text, a first frame, or first and last frames.",
-        "es": "Clips cinematográficos en 1080p de 4–15 s a partir de texto, un primer fotograma o el primero y el último.",
-        "pt": "Clipes cinematográficos em 1080p de 4–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+        "en": "1080p clips of 4–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips en 1080p de 4–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes em 1080p de 4–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
       },
       "variants": [
         {
@@ -1440,9 +1501,9 @@
     "seedance-2.5": {
       "label": "Seedance 2.5",
       "bestFor": {
-        "en": "Longer cinematic shots, up to 30 s, from text or frames, at high bitrate.",
-        "es": "Planos cinematográficos más largos, hasta 30 s, a partir de texto o fotogramas, con bitrate alto.",
-        "pt": "Planos cinematográficos mais longos, até 30 s, a partir de texto ou fotogramas, com bitrate alto."
+        "en": "Longer shots, up to 30 s, from text or frames, at high bitrate.",
+        "es": "Planos más largos, hasta 30 s, a partir de texto o fotogramas, con bitrate alto.",
+        "pt": "Planos mais longos, até 30 s, a partir de texto ou fotogramas, com bitrate alto."
       },
       "variants": [
         {
@@ -1648,6 +1709,92 @@
         }
       ]
     },
+    "wan-2.6-reference": {
+      "label": "Wan 2.6 References",
+      "bestFor": {
+        "en": "5 or 10 s 1080p clips that follow one to three reference videos.",
+        "es": "Clips en 1080p de 5 o 10 s que siguen de uno a tres vídeos de referencia.",
+        "pt": "Clipes em 1080p de 5 ou 10 s que seguem um a três vídeos de referência."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.6/reference-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 5,
+            "max": 10,
+            "default": 5,
+            "allowed": [
+              5,
+              10
+            ]
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "video_urls": "{videos}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          },
+          "videos": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    },
+    "wan-2.7": {
+      "label": "Wan 2.7",
+      "bestFor": {
+        "en": "1080p clips of 2–15 s from text, a first frame, or first and last frames.",
+        "es": "Clips en 1080p de 2–15 s a partir de texto, un primer fotograma o el primero y el último.",
+        "pt": "Clipes em 1080p de 2–15 s a partir de texto, um primeiro fotograma ou o primeiro e o último."
+      },
+      "variants": [
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.7/text-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
+            "resolution": "1080p"
+          }
+        },
+        {
+          "endpoint": "https://api.higgsfield.ai/wan/v2.7/image-to-video",
+          "durations": {
+            "min": 2,
+            "max": 15,
+            "default": 5
+          },
+          "request": {
+            "prompt": "{prompt}",
+            "image_url": "{image}",
+            "end_image_url": "{lastImage}",
+            "duration": "{duration}",
+            "resolution": "1080p"
+          },
+          "images": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
     "wan-2.7-reference": {
       "label": "Wan 2.7 References",
       "bestFor": {
@@ -1764,9 +1911,9 @@
     "wan-3.0-prime": {
       "label": "Wan 3.0 Prime",
       "bestFor": {
-        "en": "The premium Wan 3.0 tier for long 1080p clips where quality matters more than cost.",
-        "es": "El nivel premium de Wan 3.0 para clips largos en 1080p cuando la calidad importa más que el coste.",
-        "pt": "O nível premium do Wan 3.0 para clipes longos em 1080p quando a qualidade importa mais do que o custo."
+        "en": "Wan 3.0's Prime tier, with the same inputs as Wan 3.0.",
+        "es": "El nivel Prime de Wan 3.0, con las mismas entradas que Wan 3.0.",
+        "pt": "O nível Prime do Wan 3.0, com as mesmas entradas do Wan 3.0."
       },
       "variants": [
         {

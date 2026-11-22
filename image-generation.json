@@ -58,6 +58,34 @@
     "headers": "/upload_headers"
   },
   "models": {
+    "ads-studio": {
+      "label": "Ads Studio",
+      "bestFor": {
+        "en": "Turns a marketing brief and up to eight product references into an ad concept image.",
+        "es": "Convierte un briefing de marketing y hasta ocho referencias de producto en una imagen de concepto de anuncio.",
+        "pt": "Transforma um briefing de marketing e até oito referências de produto numa imagem de conceito de anúncio."
+      },
+      "endpoint": "https://api.higgsfield.ai/higgsfield/ads-studio/v1.0",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "4:5",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "batch_size": 1
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/higgsfield/ads-studio/v1.0",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
     "grok-image-2": {
       "label": "Grok Image 2.0",
       "bestFor": {
@@ -90,9 +118,9 @@
     "ideogram-4": {
       "label": "Ideogram 4.0",
       "bestFor": {
-        "en": "Typography first: posters, titles and thumbnails with exact lettering; remixes one reference image.",
-        "es": "La tipografía primero: carteles, títulos y miniaturas con letras exactas; remezcla una imagen de referencia.",
-        "pt": "A tipografia primeiro: cartazes, títulos e miniaturas com letras exatas; remistura uma imagem de referência."
+        "en": "Images with lettering, such as posters, titles and thumbnails; remixes one reference image.",
+        "es": "Imágenes con texto, como carteles, títulos y miniaturas; remezcla una imagen de referencia.",
+        "pt": "Imagens com texto, como cartazes, títulos e miniaturas; remistura uma imagem de referência."
       },
       "endpoint": "https://api.higgsfield.ai/ideogram/v4.0",
       "aspectRatios": {
@@ -119,9 +147,9 @@
     "marketing-studio": {
       "label": "Marketing Studio 2.0",
       "bestFor": {
-        "en": "Campaign and ad images, built around your product photos (up to eight references).",
-        "es": "Imágenes de campañas y anuncios, construidas alrededor de las fotos de tu producto (hasta ocho referencias).",
-        "pt": "Imagens de campanhas e anúncios, construídas à volta das fotografias do teu produto (até oito referências)."
+        "en": "Campaign images, generated or edited from up to eight references such as product photos.",
+        "es": "Imágenes de campaña, generadas o editadas a partir de hasta ocho referencias, como fotos de producto.",
+        "pt": "Imagens de campanha, geradas ou editadas a partir de até oito referências, como fotografias de produto."
       },
       "endpoint": "https://api.higgsfield.ai/marketing-studio/image",
       "aspectRatios": {
@@ -148,9 +176,9 @@
     "marketing-studio-flare": {
       "label": "Marketing Studio 2.5 Flare",
       "bestFor": {
-        "en": "The newer campaign model for polished ads from product photos.",
-        "es": "El modelo de campañas más reciente para anuncios cuidados a partir de fotos de producto.",
-        "pt": "O modelo de campanhas mais recente para anúncios cuidados a partir de fotografias de produto."
+        "en": "Marketing Studio 2.5 Flare, the newer campaign image model, with up to eight references.",
+        "es": "Marketing Studio 2.5 Flare, el modelo de imágenes de campaña más reciente, con hasta ocho referencias.",
+        "pt": "Marketing Studio 2.5 Flare, o modelo de imagens de campanha mais recente, com até oito referências."
       },
       "endpoint": "https://api.higgsfield.ai/marketing-studio/image/flare",
       "aspectRatios": {
@@ -177,9 +205,9 @@
     "marketing-studio-sunburst": {
       "label": "Marketing Studio 2.5 Sunburst",
       "bestFor": {
-        "en": "Marketing Studio 2.5's other look, for bright, high-energy campaign images.",
-        "es": "El otro estilo de Marketing Studio 2.5, para imágenes de campaña luminosas y con energía.",
-        "pt": "O outro estilo do Marketing Studio 2.5, para imagens de campanha luminosas e com energia."
+        "en": "Marketing Studio 2.5's Sunburst variant, with up to eight references.",
+        "es": "La variante Sunburst de Marketing Studio 2.5, con hasta ocho referencias.",
+        "pt": "A variante Sunburst do Marketing Studio 2.5, com até oito referências."
       },
       "endpoint": "https://api.higgsfield.ai/marketing-studio/image/sunburst",
       "aspectRatios": {
@@ -206,9 +234,9 @@
     "qwen-image-3": {
       "label": "Qwen Image 3",
       "bestFor": {
-        "en": "Reliable 2K images with clean text in the picture; edits up to three reference images.",
-        "es": "Imágenes fiables en 2K con texto limpio dentro de la imagen; edita hasta tres imágenes de referencia.",
-        "pt": "Imagens fiáveis em 2K com texto limpo dentro da imagem; edita até três imagens de referência."
+        "en": "2K images from a description, or edits of up to three reference images.",
+        "es": "Imágenes en 2K a partir de una descripción, o ediciones de hasta tres imágenes de referencia.",
+        "pt": "Imagens em 2K a partir de uma descrição, ou edições de até três imagens de referência."
       },
       "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/text-to-image",
       "aspectRatios": {
@@ -234,9 +262,9 @@
     "recraft-4.1": {
       "label": "Recraft V4.1",
       "bestFor": {
-        "en": "Design-led 1K images: illustrations, icons and brand graphics.",
-        "es": "Imágenes de diseño en 1K: ilustraciones, iconos y gráficos de marca.",
-        "pt": "Imagens de design em 1K: ilustrações, ícones e gráficos de marca."
+        "en": "Recraft V4.1 at 1K.",
+        "es": "Recraft V4.1 en 1K.",
+        "pt": "Recraft V4.1 em 1K."
       },
       "endpoint": "https://api.higgsfield.ai/recraft/v4.1/text-to-image",
       "aspectRatios": {
@@ -257,9 +285,9 @@
     "recraft-4.1-pro": {
       "label": "Recraft V4.1 Pro",
       "bestFor": {
-        "en": "Recraft's design-led look at 2K, for print or large layouts.",
-        "es": "El estilo de diseño de Recraft en 2K, para impresión o maquetas grandes.",
-        "pt": "O estilo de design da Recraft em 2K, para impressão ou paginações grandes."
+        "en": "Recraft V4.1 at 2K.",
+        "es": "Recraft V4.1 en 2K.",
+        "pt": "Recraft V4.1 em 2K."
       },
       "endpoint": "https://api.higgsfield.ai/recraft/v4.1/pro/text-to-image",
       "aspectRatios": {
@@ -280,9 +308,9 @@
     "recraft-4.1-utility": {
       "label": "Recraft V4.1 Utility",
       "bestFor": {
-        "en": "Plain, practical 1K images such as product shots, backgrounds and diagrams.",
-        "es": "Imágenes prácticas en 1K, como fotos de producto, fondos y diagramas.",
-        "pt": "Imagens práticas em 1K, como fotografias de produto, fundos e diagramas."
+        "en": "Recraft V4.1's Utility variant at 1K.",
+        "es": "La variante Utility de Recraft V4.1 en 1K.",
+        "pt": "A variante Utility do Recraft V4.1 em 1K."
       },
       "endpoint": "https://api.higgsfield.ai/recraft/v4.1/utility/text-to-image",
       "aspectRatios": {
@@ -303,9 +331,9 @@
     "recraft-4.1-utility-pro": {
       "label": "Recraft V4.1 Utility Pro",
       "bestFor": {
-        "en": "Recraft Utility at 2K.",
-        "es": "Recraft Utility en 2K.",
-        "pt": "Recraft Utility em 2K."
+        "en": "Recraft V4.1's Utility variant at 2K.",
+        "es": "La variante Utility de Recraft V4.1 en 2K.",
+        "pt": "A variante Utility do Recraft V4.1 em 2K."
       },
       "endpoint": "https://api.higgsfield.ai/recraft/v4.1/utility/pro/text-to-image",
       "aspectRatios": {
@@ -326,9 +354,9 @@
     "soul": {
       "label": "SOUL",
       "bestFor": {
-        "en": "Higgsfield's photographic model for realistic, fashion-style shots of people.",
-        "es": "El modelo fotográfico de Higgsfield para fotos realistas de personas, con estilo de moda.",
-        "pt": "O modelo fotográfico da Higgsfield para fotografias realistas de pessoas, com estilo de moda."
+        "en": "Higgsfield's own SOUL text-to-image model, at 1080p.",
+        "es": "El modelo SOUL de texto a imagen de Higgsfield, en 1080p.",
+        "pt": "O modelo SOUL de texto para imagem da Higgsfield, em 1080p."
       },
       "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/standard",
       "aspectRatios": {
@@ -349,9 +377,9 @@
     "soul-2": {
       "label": "SOUL 2",
       "bestFor": {
-        "en": "The newer SOUL for realistic people and lifestyle photos.",
-        "es": "El SOUL más reciente para fotos realistas de personas y estilo de vida.",
-        "pt": "O SOUL mais recente para fotografias realistas de pessoas e estilo de vida."
+        "en": "The second version of SOUL, at 1080p.",
+        "es": "La segunda versión de SOUL, en 1080p.",
+        "pt": "A segunda versão do SOUL, em 1080p."
       },
       "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/v2/standard",
       "aspectRatios": {
@@ -372,9 +400,9 @@
     "soul-cinema": {
       "label": "SOUL Cinema",
       "bestFor": {
-        "en": "Film-still looks: cinematic light and colour for moody scenes and thumbnails.",
-        "es": "Aspecto de fotograma de película: luz y color cinematográficos para escenas con atmósfera y miniaturas.",
-        "pt": "Aspeto de fotograma de filme: luz e cor cinematográficas para cenas com atmosfera e miniaturas."
+        "en": "SOUL with its fixed cinema style, at 1080p.",
+        "es": "SOUL con su estilo de cine fijo, en 1080p.",
+        "pt": "SOUL com o seu estilo de cinema fixo, em 1080p."
       },
       "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/cinema",
       "aspectRatios": {
@@ -395,9 +423,9 @@
     "z-image-turbo": {
       "label": "Z-Image Turbo",
       "bestFor": {
-        "en": "Fast, cheap 2K drafts from short descriptions (up to 800 characters).",
-        "es": "Borradores rápidos y baratos en 2K a partir de descripciones cortas (hasta 800 caracteres).",
-        "pt": "Rascunhos rápidos e baratos em 2K a partir de descrições curtas (até 800 caracteres)."
+        "en": "Turbo 2K images from short descriptions (up to 800 characters).",
+        "es": "Imágenes Turbo en 2K a partir de descripciones cortas (hasta 800 caracteres).",
+        "pt": "Imagens Turbo em 2K a partir de descrições curtas (até 800 caracteres)."
       },
       "endpoint": "https://api.higgsfield.ai/z-image/turbo",
       "aspectRatios": {

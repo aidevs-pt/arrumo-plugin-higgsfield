@@ -8,11 +8,11 @@ The default Higgsfield adapters for generated video and image assets.
 
 `video-generation.json` and `image-generation.json` are schema 3
 [Plugin SDK adapters](https://github.com/aidevs-pt/arrumo-plugin-sdk#reference)
-covering 41 video models (Kling 3.0, 2.6, 2.5, O3 and Omni, Seedance 2.0 and
-2.5, Genjutsu, Happy Horse, Wan 3.0, 2.6 and 2.7, Cinema Studio 4.0, LTX-2.5,
-MiniMax H3 and Grok Imagine Video) and 14 image models (Qwen Image 3, SOUL,
-Grok Image 2.0, Ideogram 4.0, Z-Image Turbo, Recraft V4.1 and Marketing
-Studio). Each model has a label and a best-for line in English, Spanish and
+covering 45 video models (Kling 3.0, 2.6, 2.5, O3 and Omni, Seedance 2.0 and
+2.5, Genjutsu, Happy Horse, Wan 3.0, 2.7 and 2.6, Hailuo 2.3, PixVerse V6,
+Cinema Studio 4.0, LTX-2.5, MiniMax H3 and Grok Imagine Video) and 15 image
+models (Qwen Image 3, SOUL, Grok Image 2.0, Ideogram 4.0, Z-Image Turbo,
+Recraft V4.1, Marketing Studio and Ads Studio). Each model has a label and a best-for line in English, Spanish and
 Portuguese, which the guide lists. The **Video model** and **Image model**
 settings pick the workspace defaults; creators and agents can choose any model
 per asset.
@@ -22,8 +22,9 @@ first frame, first and last frames, reference images and videos, or a clip to
 edit or extend), uploads each reference through Higgsfield's presigned upload,
 polls the job and adds the finished MP4 or image to the workspace assets.
 Generated audio stays off, so narration and music come from the edit.
-Workflows that need Higgsfield presets or trained IDs, and models without
-published API pages (Hailuo 2.3, PixVerse V6, Ads Studio), are not included.
+Workflows that need Higgsfield presets or trained IDs are not included, nor
+text-to-video for Hailuo 2.3 and Wan 2.6 (their APIs take no size) or PixVerse
+V6 image-to-video.
 
 ## Key
 
