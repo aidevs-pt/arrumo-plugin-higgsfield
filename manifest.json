@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 8,
   "id": "higgsfield",
   "name": "Higgsfield",
   "description": "Short AI video clips the agent can cut into your edits.",
@@ -18,5 +18,17 @@
       "scope": "workspace",
       "required": true
     }
-  ]
+  ],
+  "introduction": {
+    "headline": {
+      "en": "Short clips, made to order",
+      "es": "Clips cortos, hechos a medida",
+      "pt": "Clipes curtos, feitos à medida"
+    },
+    "body": {
+      "en": "Higgsfield makes short AI video clips from a prompt. The agent can ask for one when a scene needs b-roll, and it lands in Assets like everything else.",
+      "es": "Higgsfield crea clips de vídeo cortos con IA a partir de una descripción. El agente puede pedir uno cuando una escena necesita recursos, y aparece en Recursos como todo lo demás.",
+      "pt": "O Higgsfield cria clipes de vídeo curtos com IA a partir de uma descrição. O agente pode pedir um quando uma cena precisa de imagens de apoio, e aparece em Recursos como tudo o resto."
+    }
+  }
 }
