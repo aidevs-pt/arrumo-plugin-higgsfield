@@ -2,6 +2,10 @@
 
 The default Higgsfield adapters for generated video and image assets.
 
+## Guide
+
+[English](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/en/plugins/higgsfield/video-and-images.md) · [Español](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/es/plugins/higgsfield/video-and-images.md) · [Português](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/pt/plugins/higgsfield/video-and-images.md)
+
 `video-generation.json` is a schema 2 [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter)
 with three models, chosen in the plugin's **Video model** setting or per clip:
 
