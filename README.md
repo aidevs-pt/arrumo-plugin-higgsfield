@@ -1,6 +1,6 @@
 # Arrumo Higgsfield Plugin
 
-The default Higgsfield adapter for generated video assets.
+The default Higgsfield adapters for generated video and image assets.
 
 `video-generation.json` is a schema 2 [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter)
 with three models, chosen in the plugin's **Video model** setting or per clip:
@@ -18,12 +18,17 @@ address. It polls the job, downloads the finished MP4 and adds it to the
 workspace assets. Creators pick models and references in **Assets › Generate ›
 Video clip**; agents use `list_video_models` and `generate_library_video`.
 
+`image-generation.json` uses Qwen Image 3 at 2K: text-to-image, or its edit
+endpoint when one to three reference images are attached (uploaded the same
+way). The job is polled and the PNG joins the workspace assets. Higgsfield sits
+in the workspace's image provider order with the other image plugins.
+
 ## Key
 
 Create an API key in the [Higgsfield console](https://console.higgsfield.ai/) and paste it into the plugin's
 **Higgsfield API key** setting as `KEY_ID:KEY_SECRET`. Arrumo keeps it in the
 system vault and sends it only to `api.higgsfield.ai`; reference uploads go to
-the presigned storage address without it. Each clip uses your
+the presigned storage address without it. Each clip and image uses your
 Higgsfield credits; a job fails with `not_enough_credits` when the account is
 empty.
 
@@ -32,7 +37,7 @@ empty.
 Package with the SDK, including the adapter:
 
 ```sh
-python3 ../plugin-sdk/tools/package_plugin.py . higgsfield.zip --include video-generation.json
+python3 ../plugin-sdk/tools/package_plugin.py . higgsfield.zip --include video-generation.json --include image-generation.json
 ```
 
 ## Icon and trademarks

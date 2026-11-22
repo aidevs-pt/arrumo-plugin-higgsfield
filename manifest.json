@@ -2,11 +2,15 @@
   "schemaVersion": 10,
   "id": "higgsfield",
   "name": "Higgsfield",
-  "description": "Short AI video clips the agent can cut into your edits.",
+  "description": "AI video clips and images the agent can cut into your edits.",
   "capabilities": {
     "video-generation": {
       "name": "Video generation",
       "description": "Generate video assets from prompts."
+    },
+    "image-generation": {
+      "name": "Image generation",
+      "description": "Generate images from prompts, following up to three reference images."
     }
   },
   "settings": [
@@ -41,20 +45,24 @@
       "pt": "Clipes curtos, feitos à medida"
     },
     "body": {
-      "en": "Higgsfield makes short AI video clips from a prompt. The agent can ask for one when a scene needs b-roll, and it lands in Assets like everything else.",
-      "es": "Higgsfield crea clips de vídeo cortos con IA a partir de una descripción. El agente puede pedir uno cuando una escena necesita recursos, y aparece en Recursos como todo lo demás.",
-      "pt": "O Higgsfield cria clipes de vídeo curtos com IA a partir de uma descrição. O agente pode pedir um quando uma cena precisa de imagens de apoio, e aparece em Recursos como tudo o resto."
+      "en": "Higgsfield makes short AI video clips and images from a prompt, and can follow reference images and clips from your assets. The agent can ask for one when a scene needs b-roll, and it lands in Assets like everything else.",
+      "es": "Higgsfield crea clips de vídeo cortos e imágenes con IA a partir de una descripción, y puede seguir imágenes y clips de referencia de tus recursos. El agente puede pedir uno cuando una escena necesita recursos, y aparece en Recursos como todo lo demás.",
+      "pt": "O Higgsfield cria clipes de vídeo curtos e imagens com IA a partir de uma descrição, e pode seguir imagens e clipes de referência dos teus recursos. O agente pode pedir um quando uma cena precisa de imagens de apoio, e aparece em Recursos como tudo o resto."
     }
   },
   "icon": "icon.svg",
   "iconNotice": "Higgsfield and its logo are trademarks of Higgsfield AI.",
   "translations": {
     "es": {
-      "description": "Clips cortos de vídeo con IA que el agente puede montar en tus ediciones.",
+      "description": "Clips de vídeo e imágenes con IA que el agente puede montar en tus ediciones.",
       "capabilities": {
         "video-generation": {
           "name": "Generación de vídeo",
           "description": "Genera clips de vídeo a partir de descripciones."
+        },
+        "image-generation": {
+          "name": "Generación de imágenes",
+          "description": "Genera imágenes a partir de descripciones, siguiendo hasta tres imágenes de referencia."
         }
       },
       "settings": {
@@ -70,11 +78,15 @@
       "iconNotice": "Higgsfield y su logotipo son marcas de Higgsfield AI."
     },
     "pt": {
-      "description": "Clipes curtos de vídeo com IA que o agente pode montar nas tuas edições.",
+      "description": "Clipes de vídeo e imagens com IA que o agente pode montar nas tuas edições.",
       "capabilities": {
         "video-generation": {
           "name": "Geração de vídeo",
           "description": "Gera clipes de vídeo a partir de descrições."
+        },
+        "image-generation": {
+          "name": "Geração de imagens",
+          "description": "Gera imagens a partir de descrições, seguindo até três imagens de referência."
         }
       },
       "settings": {

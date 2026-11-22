@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "pluginId": "higgsfield",
+  "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/text-to-image",
+  "credentialSetting": "api-key",
+  "credentialHeader": "authorization",
+  "credentialPrefix": "Key ",
+  "model": {
+    "default": "qwen-image-3"
+  },
+  "aspectRatios": {
+    "16:9": "16:9",
+    "9:16": "9:16",
+    "1:1": "1:1",
+    "4:3": "4:3",
+    "3:4": "3:4"
+  },
+  "request": {
+    "prompt": "{prompt}",
+    "aspect_ratio": "{aspectRatio}",
+    "resolution": "2k"
+  },
+  "maxImageBytes": 20971520,
+  "references": {
+    "encoding": "urls",
+    "endpoint": "https://api.higgsfield.ai/alibaba/qwen-image-3/edit",
+    "field": "image_urls",
+    "maxImages": 3
+  },
+  "job": {
+    "submission": {
+      "statusUrl": "/status_url"
+    },
+    "status": {
+      "state": "/status",
+      "completed": [
+        "completed"
+      ],
+      "failed": [
+        "failed",
+        "nsfw",
+        "canceled"
+      ],
+      "image": "/images/0/url",
+      "error": "/error"
+    },
+    "pollSeconds": 3,
+    "timeoutSeconds": 600
+  },
+  "upload": {
+    "endpoint": "https://api.higgsfield.ai/files/generate-upload-url",
+    "request": {
+      "content_type": "{contentType}"
+    },
+    "uploadUrl": "/upload_url",
+    "publicUrl": "/public_url",
+    "headers": "/upload_headers"
+  }
+}
