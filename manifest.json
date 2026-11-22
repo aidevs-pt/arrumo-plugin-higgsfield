@@ -30,5 +30,38 @@
       "es": "Higgsfield crea clips de vídeo cortos con IA a partir de una descripción. El agente puede pedir uno cuando una escena necesita recursos, y aparece en Recursos como todo lo demás.",
       "pt": "O Higgsfield cria clipes de vídeo curtos com IA a partir de uma descrição. O agente pode pedir um quando uma cena precisa de imagens de apoio, e aparece em Recursos como tudo o resto."
     }
+  },
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" rx=\"8\" fill=\"#7c3aed\"/><rect x=\"7\" y=\"10\" width=\"13\" height=\"12\" rx=\"2.5\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 14l5-3v10l-5-3\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "translations": {
+    "es": {
+      "description": "Clips cortos de vídeo con IA que el agente puede montar en tus ediciones.",
+      "capabilities": {
+        "video-generation": {
+          "name": "Generación de vídeo",
+          "description": "Genera clips de vídeo a partir de descripciones."
+        }
+      },
+      "settings": {
+        "api-key": {
+          "label": "Clave de API de Higgsfield",
+          "description": "Se usa para los clips generados. Se guarda en el almacén del sistema; los agentes pueden usarla a través de Arrumo, pero nunca leerla."
+        }
+      }
+    },
+    "pt": {
+      "description": "Clipes curtos de vídeo com IA que o agente pode montar nas tuas edições.",
+      "capabilities": {
+        "video-generation": {
+          "name": "Geração de vídeo",
+          "description": "Gera clipes de vídeo a partir de descrições."
+        }
+      },
+      "settings": {
+        "api-key": {
+          "label": "Chave de API da Higgsfield",
+          "description": "Usada para os clipes gerados. Fica guardada no cofre do sistema; os agentes podem usá-la através do Arrumo, mas nunca lê-la."
+        }
+      }
+    }
   }
 }
