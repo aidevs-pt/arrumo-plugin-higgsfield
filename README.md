@@ -6,26 +6,24 @@ The default Higgsfield adapters for generated video and image assets.
 
 [English](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/en/plugins/higgsfield/video-and-images.md) · [Español](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/es/plugins/higgsfield/video-and-images.md) · [Português](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/pt/plugins/higgsfield/video-and-images.md)
 
-`video-generation.json` is a schema 2 [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter)
-with three models, chosen in the plugin's **Video model** setting or per clip:
+`video-generation.json` and `image-generation.json` are schema 3
+[Plugin SDK adapters](https://github.com/aidevs-pt/arrumo-plugin-sdk#reference)
+covering 41 video models (Kling 3.0, 2.6, 2.5, O3 and Omni, Seedance 2.0 and
+2.5, Genjutsu, Happy Horse, Wan 3.0, 2.6 and 2.7, Cinema Studio 4.0, LTX-2.5,
+MiniMax H3 and Grok Imagine Video) and 14 image models (Qwen Image 3, SOUL,
+Grok Image 2.0, Ideogram 4.0, Z-Image Turbo, Recraft V4.1 and Marketing
+Studio). Each model has a label and a best-for line in English, Spanish and
+Portuguese, which the guide lists. The **Video model** and **Image model**
+settings pick the workspace defaults; creators and agents can choose any model
+per asset.
 
-| Model | Without references | With references | Length |
-| --- | --- | --- | --- |
-| `kling-3.0-std` (default) | Text to video | One image to animate | 3–15 s |
-| `kling-3.0-pro` | Text to video | One image to animate | 3–15 s |
-| `seedance-2.0` | Not available | 1–9 images and up to 3 videos, or 1–3 videos | 4–15 s |
-
-Arrumo submits the prompt, ratio (16:9, 9:16 or 1:1; an animated image keeps
-its own shape) and length, silent. Reference files are workspace assets: Arrumo
-uploads each through Higgsfield's presigned upload and passes the returned
-address. It polls the job, downloads the finished MP4 and adds it to the
-workspace assets. Creators pick models and references in **Assets › Generate ›
-Video clip**; agents use `list_video_models` and `generate_library_video`.
-
-`image-generation.json` uses Qwen Image 3 at 2K: text-to-image, or its edit
-endpoint when one to three reference images are attached (uploaded the same
-way). The job is polled and the PNG joins the workspace assets. Higgsfield sits
-in the workspace's image provider order with the other image plugins.
+Arrumo picks the variant of a model that fits the references attached (text,
+first frame, first and last frames, reference images and videos, or a clip to
+edit or extend), uploads each reference through Higgsfield's presigned upload,
+polls the job and adds the finished MP4 or image to the workspace assets.
+Generated audio stays off, so narration and music come from the edit.
+Workflows that need Higgsfield presets or trained IDs, and models without
+published API pages (Hailuo 2.3, PixVerse V6, Ads Studio), are not included.
 
 ## Key
 
