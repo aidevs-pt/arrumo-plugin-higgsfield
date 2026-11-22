@@ -6,10 +6,8 @@ This repository is being initialized. See the Arrumo workspace roadmap for imple
 
 ## Icon and trademarks
 
-`icon.svg` uses the official Higgsfield mark, only to identify the service this
-plugin connects to. Higgsfield and its logo are trademarks of Higgsfield AI. This plugin is not affiliated with or endorsed by
-Higgsfield AI, and the mark is not covered by this repository's license.
-
-Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE).
-
-For custom AI solutions for your company, visit [DEVS AI](https://aidevs.pt).
+`icon.svg` is a generic symbol drawn for Arrumo (a video frame with a play mark, for short generated clips), covered by this repository's
+license. It is not the provider's logo: the provider has not published permission for its
+logo to appear in another app's interface, so the plugin does not use it. The name is used
+only to say which service the plugin connects to; this plugin is not affiliated with or
+endorsed by the provider.
