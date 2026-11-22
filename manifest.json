@@ -32,6 +32,7 @@
     }
   },
   "icon": "icon.svg",
+  "iconNotice": "Higgsfield and its logo are trademarks of Higgsfield AI.",
   "translations": {
     "es": {
       "description": "Clips cortos de vídeo con IA que el agente puede montar en tus ediciones.",
@@ -46,7 +47,8 @@
           "label": "Clave de API de Higgsfield",
           "description": "Se usa para los clips generados. Se guarda en el almacén del sistema; los agentes pueden usarla a través de Arrumo, pero nunca leerla."
         }
-      }
+      },
+      "iconNotice": "Higgsfield y su logotipo son marcas de Higgsfield AI."
     },
     "pt": {
       "description": "Clipes curtos de vídeo com IA que o agente pode montar nas tuas edições.",
@@ -61,7 +63,8 @@
           "label": "Chave de API da Higgsfield",
           "description": "Usada para os clipes gerados. Fica guardada no cofre do sistema; os agentes podem usá-la através do Arrumo, mas nunca lê-la."
         }
-      }
+      },
+      "iconNotice": "Higgsfield e o seu logótipo são marcas da Higgsfield AI."
     }
   }
 }

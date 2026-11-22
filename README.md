@@ -6,8 +6,4 @@ This repository is being initialized. See the Arrumo workspace roadmap for imple
 
 ## Icon and trademarks
 
-`icon.svg` is a generic symbol drawn for Arrumo (a video frame with a play mark, for short generated clips), covered by this repository's
-license. It is not the provider's logo: the provider has not published permission for its
-logo to appear in another app's interface, so the plugin does not use it. The name is used
-only to say which service the plugin connects to; this plugin is not affiliated with or
-endorsed by the provider.
+`icon.svg` shows Higgsfield AI's logo so creators recognise the service this plugin connects to. Higgsfield and its logo are trademarks of Higgsfield AI; the manifest's `iconNotice` says so wherever Arrumo shows the icon. The logo is not covered by this repository's license, and this plugin is not affiliated with or endorsed by Higgsfield AI. The SVG is a square without rounded corners; Arrumo rounds it. If Higgsfield AI asks, replace the logo with a generic symbol and remove `iconNotice`.
