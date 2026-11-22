@@ -11,7 +11,7 @@ Video clip** or the `generate_library_video` operation.
 
 ## Key
 
-Create an API key in the Higgsfield Cloud console and paste it into the plugin's
+Create an API key in the [Higgsfield console](https://console.higgsfield.ai/) and paste it into the plugin's
 **Higgsfield API key** setting as `KEY_ID:KEY_SECRET`. Arrumo keeps it in the
 system vault and sends it only to `api.higgsfield.ai`. Each clip uses your
 Higgsfield credits; a job fails with `not_enough_credits` when the account is
