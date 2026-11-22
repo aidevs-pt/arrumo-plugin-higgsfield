@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "pluginId": "higgsfield",
+  "endpoint": "https://api.higgsfield.ai/kling-video/v3.0/std/text-to-video",
+  "credentialSetting": "api-key",
+  "credentialHeader": "authorization",
+  "credentialPrefix": "Key ",
+  "aspectRatios": {
+    "16:9": "16:9",
+    "9:16": "9:16",
+    "1:1": "1:1"
+  },
+  "durations": {
+    "min": 3,
+    "max": 15,
+    "default": 5
+  },
+  "request": {
+    "prompt": "{prompt}",
+    "duration": "{duration}",
+    "aspect_ratio": "{aspectRatio}",
+    "sound": "off"
+  },
+  "submission": {
+    "statusUrl": "/status_url"
+  },
+  "status": {
+    "state": "/status",
+    "completed": ["completed"],
+    "failed": ["failed", "nsfw", "canceled"],
+    "video": "/video/url",
+    "error": "/error"
+  },
+  "pollSeconds": 5,
+  "timeoutSeconds": 900,
+  "maxVideoBytes": 209715200
+}

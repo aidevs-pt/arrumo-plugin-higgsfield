@@ -2,7 +2,28 @@
 
 The default Higgsfield adapter for generated video assets.
 
-This repository is being initialized. See the Arrumo workspace roadmap for implementation status.
+`video-generation.json` describes Higgsfield's Kling 3.0 Standard text-to-video
+endpoint with the [Plugin SDK video adapter](https://github.com/aidevs-pt/arrumo-plugin-sdk#describe-a-video-generation-adapter).
+Arrumo submits the prompt, ratio (16:9, 9:16 or 1:1) and length (3 to 15
+seconds, silent), polls the job, downloads the finished MP4 and adds it to the
+workspace assets. Creators and agents ask for clips from **Assets › Generate ›
+Video clip** or the `generate_library_video` operation.
+
+## Key
+
+Create an API key in the Higgsfield Cloud console and paste it into the plugin's
+**Higgsfield API key** setting as `KEY_ID:KEY_SECRET`. Arrumo keeps it in the
+system vault and sends it only to `api.higgsfield.ai`. Each clip uses your
+Higgsfield credits; a job fails with `not_enough_credits` when the account is
+empty.
+
+## Release
+
+Package with the SDK, including the adapter:
+
+```sh
+python3 ../plugin-sdk/tools/package_plugin.py . higgsfield.zip --include video-generation.json
+```
 
 ## Icon and trademarks
 

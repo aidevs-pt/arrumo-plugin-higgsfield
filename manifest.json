@@ -13,7 +13,7 @@
     {
       "id": "api-key",
       "label": "Higgsfield API key",
-      "description": "Used for generated clips. Stored in the system vault; agents can use it through Arrumo but never read it.",
+      "description": "Paste it as KEY_ID:KEY_SECRET from the Higgsfield Cloud console. Used for generated clips. Stored in the system vault; agents can use it through Arrumo but never read it.",
       "kind": "secret",
       "scope": "workspace",
       "required": true
@@ -45,7 +45,7 @@
       "settings": {
         "api-key": {
           "label": "Clave de API de Higgsfield",
-          "description": "Se usa para los clips generados. Se guarda en el almacén del sistema; los agentes pueden usarla a través de Arrumo, pero nunca leerla."
+          "description": "Pégala como ID_DE_CLAVE:SECRETO desde la consola de Higgsfield Cloud. Se usa para los clips generados. Se guarda en el almacén del sistema; los agentes pueden usarla a través de Arrumo, pero nunca leerla."
         }
       },
       "iconNotice": "Higgsfield y su logotipo son marcas de Higgsfield AI."
@@ -61,7 +61,7 @@
       "settings": {
         "api-key": {
           "label": "Chave de API da Higgsfield",
-          "description": "Usada para os clipes gerados. Fica guardada no cofre do sistema; os agentes podem usá-la através do Arrumo, mas nunca lê-la."
+          "description": "Cole-a como ID_DA_CHAVE:SEGREDO a partir da consola Higgsfield Cloud. Usada para os clipes gerados. Fica guardada no cofre do sistema; os agentes podem usá-la através do Arrumo, mas nunca lê-la."
         }
       },
       "iconNotice": "Higgsfield e o seu logótipo são marcas da Higgsfield AI."
