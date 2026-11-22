@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 8,
+  "schemaVersion": 10,
   "id": "higgsfield",
   "name": "Higgsfield",
   "description": "Short AI video clips the agent can cut into your edits.",
@@ -16,7 +16,8 @@
       "description": "Paste it as KEY_ID:KEY_SECRET from the Higgsfield Cloud console. Used for generated clips. Stored in the system vault; agents can use it through Arrumo but never read it.",
       "kind": "secret",
       "scope": "workspace",
-      "required": true
+      "required": true,
+      "helpUrl": "https://cloud.higgsfield.ai/"
     }
   ],
   "introduction": {
