@@ -65,6 +65,10 @@ python3 ../plugin-sdk/tools/package_plugin.py . higgsfield.zip --include video-g
 
 `icon.svg` shows Higgsfield AI's logo so creators recognise the service this plugin connects to. Higgsfield and its logo are trademarks of Higgsfield AI; the manifest's `iconNotice` says so wherever Arrumo shows the icon. The logo is not covered by this repository's license, and this plugin is not affiliated with or endorsed by Higgsfield AI. The SVG is a square without rounded corners; Arrumo rounds it. If Higgsfield AI asks, replace the logo with a generic symbol and remove `iconNotice`.
 
+## Contributing
+
+Contributions are welcome: read [CONTRIBUTING.md](CONTRIBUTING.md) and our [Code of Conduct](CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE). Built by [DEVS AI](https://aidevs.pt), who make custom AI solutions for companies.
