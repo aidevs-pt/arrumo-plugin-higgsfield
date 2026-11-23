@@ -1,10 +1,28 @@
-# Arrumo Higgsfield Plugin
+<p align="center">
+  <img src="icon.svg" width="88" height="88" alt="">
+</p>
 
-The default Higgsfield adapters for generated video and image assets.
+<h1 align="center">Higgsfield for Arrumo AI Video Editor</h1>
 
-## Guide
+<p align="center">Generate video clips and images with 45 video and 15 image models through Higgsfield, from text, frames or references.</p>
 
-[English](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/en/plugins/higgsfield/video-and-images.md) · [Español](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/es/plugins/higgsfield/video-and-images.md) · [Português](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/pt/plugins/higgsfield/video-and-images.md)
+<p align="center">
+  <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-2337B4"></a>
+  <img alt="Bundled with Arrumo" src="https://img.shields.io/badge/bundled%20with-Arrumo-2337B4">
+  <a href="https://www.aidevs.pt/tools/arrumo/docs/plugins/higgsfield/video-and-images"><img alt="Docs in English, Spanish and Portuguese" src="https://img.shields.io/badge/docs-EN%20%C2%B7%20ES%20%C2%B7%20PT-111"></a>
+</p>
+
+[![Arrumo + Higgsfield: what it can do](https://img.youtube.com/vi/a8z9Aql6qPg/maxresdefault.jpg)](https://youtu.be/a8z9Aql6qPg)
+
+<p align="center"><sub>Every clip and image in this video was generated with this plugin, and Arrumo made the whole video.</sub></p>
+
+This plugin ships with [Arrumo AI Video Editor](https://github.com/aidevs-pt/arrumo-video-editor), the free, open-source desktop app where an AI agent writes, designs, voices and cuts your videos and you approve every step. It is turned on in a fresh install; manage it in **Settings › Plugins**.
+
+## Guides
+
+- **Video clips and images**: [English](https://www.aidevs.pt/tools/arrumo/docs/plugins/higgsfield/video-and-images) · [Español](https://www.aidevs.pt/es/tools/arrumo/docs/plugins/higgsfield/video-and-images) · [Português](https://www.aidevs.pt/pt/tools/arrumo/docs/plugins/higgsfield/video-and-images)
+
+## How it works
 
 `video-generation.json` and `image-generation.json` are schema 3
 [Plugin SDK adapters](https://github.com/aidevs-pt/arrumo-plugin-sdk#reference)
@@ -46,3 +64,7 @@ python3 ../plugin-sdk/tools/package_plugin.py . higgsfield.zip --include video-g
 ## Icon and trademarks
 
 `icon.svg` shows Higgsfield AI's logo so creators recognise the service this plugin connects to. Higgsfield and its logo are trademarks of Higgsfield AI; the manifest's `iconNotice` says so wherever Arrumo shows the icon. The logo is not covered by this repository's license, and this plugin is not affiliated with or endorsed by Higgsfield AI. The SVG is a square without rounded corners; Arrumo rounds it. If Higgsfield AI asks, replace the logo with a generic symbol and remove `iconNotice`.
+
+## License
+
+Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE). Built by [DEVS AI](https://aidevs.pt), who make custom AI solutions for companies.
