@@ -38,7 +38,7 @@
     "error": "/error"
   },
   "pollSeconds": 5,
-  "timeoutSeconds": 900,
+  "timeoutSeconds": 2700,
   "maxVideoBytes": 209715200,
   "model": {
     "default": "kling-3.0-std",
