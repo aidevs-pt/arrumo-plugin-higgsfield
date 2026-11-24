@@ -12,7 +12,7 @@
   <a href="https://www.aidevs.pt/tools/arrumo/docs/plugins/higgsfield/video-and-images"><img alt="Docs in English, Spanish and Portuguese" src="https://img.shields.io/badge/docs-EN%20%C2%B7%20ES%20%C2%B7%20PT-111"></a>
 </p>
 
-[![Arrumo + Higgsfield: a launch film made entirely in Arrumo](https://img.youtube.com/vi/a8z9Aql6qPg/maxresdefault.jpg)](https://youtu.be/a8z9Aql6qPg)
+[![Arrumo + Higgsfield: a launch film made entirely in Arrumo](media/arrumo-higgsfield.gif)](https://youtu.be/a8z9Aql6qPg)
 
 <p align="center"><sub>Every clip and image in this video was generated with this plugin, and Arrumo made the whole video.</sub></p>
 
