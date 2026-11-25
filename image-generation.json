@@ -86,6 +86,36 @@
         "maxImages": 8
       }
     },
+    "graphic-ads": {
+      "label": "Graphic Ads",
+      "bestFor": {
+        "en": "Higgsfield's workflow for ad creatives with layout and typography; attach up to eight product photos.",
+        "es": "El flujo de Higgsfield para creatividades de anuncios con composición y tipografía; adjunta hasta ocho fotos del producto.",
+        "pt": "O fluxo da Higgsfield para criativos de anúncios com composição e tipografia; anexa até oito fotos do produto."
+      },
+      "endpoint": "https://api.higgsfield.ai/workflows/graphic-ads",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k",
+        "enhance_prompt": false
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/workflows/graphic-ads",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
     "grok-image-2": {
       "label": "Grok Image 2.0",
       "bestFor": {
@@ -142,6 +172,34 @@
         "field": "image_url",
         "maxImages": 1,
         "single": true
+      }
+    },
+    "kling-image-4": {
+      "label": "Kling Image 4.0",
+      "bestFor": {
+        "en": "Realistic, detailed 2K scenes and products from text, or edits guided by up to eight references.",
+        "es": "Escenas y productos realistas y detallados en 2K a partir de texto, o ediciones guiadas por hasta ocho referencias.",
+        "pt": "Cenas e produtos realistas e detalhados em 2K a partir de texto, ou edições guiadas por até oito referências."
+      },
+      "endpoint": "https://api.higgsfield.ai/kling-image/v4.0/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/kling-image/v4.0/edit",
+        "field": "image_urls",
+        "maxImages": 8
       }
     },
     "marketing-studio": {
@@ -227,6 +285,66 @@
       "references": {
         "encoding": "urls",
         "endpoint": "https://api.higgsfield.ai/marketing-studio/image/sunburst",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "marketplace-design": {
+      "label": "Marketplace Design",
+      "bestFor": {
+        "en": "Higgsfield's workflow for store listing images; attach up to eight photos of the product.",
+        "es": "El flujo de Higgsfield para imágenes de fichas de tienda; adjunta hasta ocho fotos del producto.",
+        "pt": "O fluxo da Higgsfield para imagens de fichas de loja; anexa até oito fotos do produto."
+      },
+      "endpoint": "https://api.higgsfield.ai/workflows/marketplace-design",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k",
+        "enhance_prompt": false
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/workflows/marketplace-design",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
+    "product-shots": {
+      "label": "Product Shots",
+      "bestFor": {
+        "en": "Higgsfield's workflow for campaign-style product photos; attach up to eight photos of the product.",
+        "es": "El flujo de Higgsfield para fotos de producto de campaña; adjunta hasta ocho fotos del producto.",
+        "pt": "O fluxo da Higgsfield para fotos de produto de campanha; anexa até oito fotos do produto."
+      },
+      "endpoint": "https://api.higgsfield.ai/workflows/product-shots",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "quality": "high",
+        "resolution": "2k",
+        "enhance_prompt": false
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/workflows/product-shots",
         "field": "image_urls",
         "maxImages": 8
       }
@@ -351,6 +469,34 @@
         "output_format": "png"
       }
     },
+    "seedream-5-pro": {
+      "label": "Seedream 5.0 Pro",
+      "bestFor": {
+        "en": "ByteDance's detailed 2K images for product visuals and scenes, or edits guided by up to eight references.",
+        "es": "Imágenes 2K detalladas de ByteDance para producto y escenas, o ediciones guiadas por hasta ocho referencias.",
+        "pt": "Imagens 2K detalhadas da ByteDance para produto e cenas, ou edições guiadas por até oito referências."
+      },
+      "endpoint": "https://api.higgsfield.ai/bytedance/seedream/v5.0/pro/text-to-image",
+      "aspectRatios": {
+        "16:9": "16:9",
+        "9:16": "9:16",
+        "1:1": "1:1",
+        "4:5": "3:4",
+        "4:3": "4:3",
+        "3:4": "3:4"
+      },
+      "request": {
+        "prompt": "{prompt}",
+        "aspect_ratio": "{aspectRatio}",
+        "resolution": "2k"
+      },
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/bytedance/seedream/v5.0/pro/edit",
+        "field": "image_urls",
+        "maxImages": 8
+      }
+    },
     "soul": {
       "label": "SOUL",
       "bestFor": {
@@ -377,9 +523,9 @@
     "soul-2": {
       "label": "SOUL 2",
       "bestFor": {
-        "en": "The second version of SOUL, at 1080p.",
-        "es": "La segunda versión de SOUL, en 1080p.",
-        "pt": "A segunda versão do SOUL, em 1080p."
+        "en": "The second version of SOUL, at 1080p; it can also restyle one reference image.",
+        "es": "La segunda versión de SOUL, en 1080p; también puede reinterpretar una imagen de referencia.",
+        "pt": "A segunda versão do SOUL, em 1080p; também pode reinterpretar uma imagem de referência."
       },
       "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/v2/standard",
       "aspectRatios": {
@@ -395,29 +541,13 @@
         "aspect_ratio": "{aspectRatio}",
         "resolution": "1080p",
         "batch_size": 1
-      }
-    },
-    "soul-cinema": {
-      "label": "SOUL Cinema",
-      "bestFor": {
-        "en": "SOUL with its fixed cinema style, at 1080p.",
-        "es": "SOUL con su estilo de cine fijo, en 1080p.",
-        "pt": "SOUL com o seu estilo de cinema fixo, em 1080p."
       },
-      "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/cinema",
-      "aspectRatios": {
-        "16:9": "16:9",
-        "9:16": "9:16",
-        "1:1": "1:1",
-        "4:5": "3:4",
-        "4:3": "4:3",
-        "3:4": "3:4"
-      },
-      "request": {
-        "prompt": "{prompt}",
-        "aspect_ratio": "{aspectRatio}",
-        "resolution": "1080p",
-        "batch_size": 1
+      "references": {
+        "encoding": "urls",
+        "endpoint": "https://api.higgsfield.ai/higgsfield-ai/soul/v2/image-to-image",
+        "field": "image_url",
+        "maxImages": 1,
+        "single": true
       }
     },
     "z-image-turbo": {
