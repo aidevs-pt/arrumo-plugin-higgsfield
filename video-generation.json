@@ -1628,6 +1628,11 @@
         },
         {
           "endpoint": "https://api.higgsfield.ai/sand/magi-2/image-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
           "durations": {
             "min": 4,
             "max": 30,
@@ -1638,6 +1643,7 @@
             "image_url": "{image}",
             "end_image_url": "{lastImage}",
             "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
             "resolution": "1080p",
             "generate_audio": false
           },
@@ -1858,6 +1864,11 @@
         },
         {
           "endpoint": "https://api.higgsfield.ai/minimax/h3-lite/image-to-video",
+          "aspectRatios": {
+            "16:9": "16:9",
+            "9:16": "9:16",
+            "1:1": "1:1"
+          },
           "durations": {
             "min": 4,
             "max": 15,
@@ -1868,6 +1879,7 @@
             "image_url": "{image}",
             "end_image_url": "{lastImage}",
             "duration": "{duration}",
+            "aspect_ratio": "{aspectRatio}",
             "resolution": "768P",
             "aigc_watermark": false
           },
