@@ -4,7 +4,7 @@
 
 <h1 align="center">Higgsfield for Arrumo AI Video Editor</h1>
 
-<p align="center">Generate video clips and images with 45 video and 15 image models through Higgsfield, from text, frames or references.</p>
+<p align="center">Generate video clips and images with 57 video and 19 image models through Higgsfield, from text, frames or references.</p>
 
 <p align="center">
   <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-2337B4"></a>
@@ -26,11 +26,13 @@ This plugin ships with [Arrumo AI Video Editor](https://github.com/aidevs-pt/arr
 
 `video-generation.json` and `image-generation.json` are schema 3
 [Plugin SDK adapters](https://github.com/aidevs-pt/arrumo-plugin-sdk#reference)
-covering 45 video models (Kling 3.0, 2.6, 2.5, O3 and Omni, Seedance 2.0 and
-2.5, Genjutsu, Happy Horse, Wan 3.0, 2.7 and 2.6, Hailuo 2.3, PixVerse V6,
-Cinema Studio 4.0, LTX-2.5, MiniMax H3 and Grok Imagine Video) and 15 image
-models (Qwen Image 3, SOUL, Grok Image 2.0, Ideogram 4.0, Z-Image Turbo,
-Recraft V4.1, Marketing Studio and Ads Studio). Each model has a label and a best-for line in English, Spanish and
+covering 57 video models (Kling 4.0 and 4.0 Flash, Kling 3.0, 2.6, 2.5, O3
+and Omni, Seedance 2.0 and 2.5, MAGI-2, Genjutsu and Genjutsu Light, Happy
+Horse, Wan 3.0, 2.7 and 2.6, Hailuo 2.3, PixVerse V6, Cinema Studio 4.0,
+LTX-2.5, MiniMax H3 Highspeed and Lite, and Grok Imagine Video) and 19 image
+models (Qwen Image 3, Seedream 5.0 Pro, Kling Image 4.0, SOUL, Grok Image 2.0,
+Ideogram 4.0, Z-Image Turbo, Recraft V4.1, Marketing Studio, Ads Studio, and
+the Product Shots, Graphic Ads and Marketplace Design workflows). Each model has a label and a best-for line in English, Spanish and
 Portuguese, which the guide lists. The **Video model** and **Image model**
 settings pick the workspace defaults; creators and agents can choose any model
 per asset.
