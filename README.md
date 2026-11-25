@@ -42,9 +42,10 @@ first frame, first and last frames, reference images and videos, or a clip to
 edit or extend), uploads each reference through Higgsfield's presigned upload,
 polls the job and adds the finished MP4 or image to the workspace assets.
 Generated audio stays off, so narration and music come from the edit.
-Workflows that need Higgsfield presets or trained IDs are not included, nor
-text-to-video for Hailuo 2.3 and Wan 2.6 (their APIs take no size) or PixVerse
-V6 image-to-video.
+Endpoints that need presets, trained IDs or other inputs than a prompt (such as
+Genjutsu Restyle, AI Influencer and Soul ID) are not included, nor Kling Image
+4.0 series, audio references, or text-to-video for Hailuo 2.3 and Wan 2.6
+(their APIs take no size).
 
 ## Key
 
